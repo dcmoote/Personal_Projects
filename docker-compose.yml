@@ -1,0 +1,62 @@
+services:
+  api:
+    build: .
+    container_name: flare-api
+    depends_on:
+      migrations:
+        condition: service_completed_successfully
+      mysql:
+        condition: service_healthy
+    environment:
+      - ASPNETCORE_URLS=http://+:8081
+      - DOTNET_ENVIRONMENT=Prod
+      - JwtSettings__Secret=${JWT_SECRET}
+      - MYSQL_PASSWORD=${MYSQL_FLARE_ADMIN_PASSWORD}
+    image: flare-api
+    networks:
+      - backend
+    ports:
+      - "8081:8081"
+
+  migrations:
+    build: .
+    command: ["/bin/sh", "/app/docker-compose.migrations.sh"]
+    container_name: flare-migrations
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      - DOTNET_ENVIRONMENT=Prod
+      - MYSQL_PASSWORD=${MYSQL_FLARE_ADMIN_PASSWORD}
+    image: flare-api
+    networks:
+      - backend
+
+  mysql:
+    container_name: flare-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_USER=flare-admin
+      - MYSQL_PASSWORD=${MYSQL_FLARE_ADMIN_PASSWORD}
+    healthcheck:
+      test: ["CMD", "mysqladmin", "-u", "flare-admin", "-p${MYSQL_FLARE_ADMIN_PASSWORD}", "ping"]
+      interval: 30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
+    image: mysql
+    networks:
+      - backend
+    ports:
+      - "3307:3306"
+    restart: always
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./docker-compose.mysql.sql:/docker-entrypoint-initdb.d/docker-compose.mysql.sql
+
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  mysql_data:
