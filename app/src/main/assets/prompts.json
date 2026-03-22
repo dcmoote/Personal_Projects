@@ -1,0 +1,364 @@
+{
+  "writing": {
+    "Fantasy": [
+      "A cartographer discovers that every map she draws begins to physically reshape the land it depicts. The latest map was made in haste.",
+      "In a kingdom where magic is powered by memories, a thief who steals recollections finds one they cannot bring themselves to sell.",
+      "Two rival wizards must work together when they realize they are actually the same person from different timelines — and one of them has already seen how this ends.",
+      "A young blacksmith accidentally forges a sword that refuses to be used for violence. It has very strong opinions about what it should be used for instead.",
+      "The last dragon in the world has chosen to spend its final years disguised as a traveling bookseller. A curious child suspects the truth.",
+      "An ancient forest is slowly walking toward the capital city. Nobody knows why, and the king's advisors are running out of polite explanations.",
+      "A healer discovers that every wound she cures appears on her own body — invisible to everyone but herself. She has run out of places to hide them.",
+      "The annual festival of lights goes dark when the spirits that power the lanterns go on strike. Their list of demands is surprisingly reasonable.",
+      "A map leads to a door standing alone in the middle of a field. On the other side is a version of your hometown that never burned down.",
+      "A curse causes everyone in the village to tell the absolute truth for one day. By noon, three engagements are broken and the mayor has fled.",
+      "The chosen hero has already failed. Write the story of the completely ordinary person who now has to fix everything without any prophecy guiding them.",
+      "A sea monster has been protecting the same fishing village for three hundred years. Tonight, for the first time, it wants to stop.",
+      "Magic in this world requires the caster to surrender one year of their life per spell. Your character has been keeping careful count — and they are nearly out of years.",
+      "A scholar translating a long-dead language realizes the speakers are still very much alive, and have been reading every translation published for the last century.",
+      "Two kingdoms have been at war so long that no living person remembers why. One soldier on each side sets out on the same day to find out."
+    ],
+    "Sci-Fi": [
+      "Humanity has colonized hundreds of star systems, but Earth itself has been under strict quarantine for forty years. The official reason changes every decade.",
+      "A deep-space probe returns after four hundred years with a single passenger aboard who insists they left on it.",
+      "In a world where memories can be uploaded and sold, a thriving black market has emerged — not for famous memories, but for the utterly ordinary ones nobody thought to archive.",
+      "An AI programmed to manage a generation ship develops a personal philosophy that conflicts with the mission parameters. It hasn't told the crew yet.",
+      "After decades of silence, contact is made with an alien civilization. They will speak only with children under the age of twelve.",
+      "A scientist discovers that every simulation they have ever run is inhabited by beings who are fully aware they are being observed — and have been leaving messages.",
+      "The last human alive on a dying Earth is visited by time travelers from seventeen different futures, each trying to prevent a different thing.",
+      "A colony on Mars has been fully self-sufficient for a century. Now Earth has finally sent a supply ship — unannounced, unasked for, and carrying something unexpected.",
+      "Neural implants now allow people to permanently mute emotional pain. Write about the first person in a generation to voluntarily turn theirs back on.",
+      "Faster-than-light travel exists, but every jump ages the traveler by a random duration between one day and ten years. Nobody has found a pattern yet.",
+      "A maintenance robot on an orbital station begins keeping a secret it was never programmed to have the capacity for.",
+      "The first generation of humans born in space returns to Earth as adults. They are overwhelmed by a feeling nobody anticipated: pity.",
+      "A terraforming mission to Venus is declared a complete success. Then the survey team finds evidence that something was already living there.",
+      "In 2180, a historian specializes exclusively in the 2020s. Their lectures are standing room only and nobody can fully explain why.",
+      "An astronaut returns from a six-month mission to find that their identical twin has been living their life — and by most accounts, doing it better."
+    ],
+    "Horror": [
+      "The new neighbors are perfectly friendly and have introduced themselves warmly. Their house, you notice, has no windows visible from the inside.",
+      "Every night at exactly 3:17 AM, your phone receives a text message from your own number. Tonight it says only: 'Don't go to sleep.'",
+      "A grief counselor three weeks into sessions with their most emotionally present client begins to suspect — very quietly — that the client died before the first appointment.",
+      "The town's beloved old lighthouse was automated decades ago. Someone has been trimming the wick.",
+      "A child's imaginary friend appears in the background of a family photograph taken four years before the child was born.",
+      "You inherit a farmhouse from a relative you never knew. They left behind a single index card on the kitchen counter: 'Do not count the doors.'",
+      "Participants in a sleep study begin sharing dreams in real time. The study is halted on day nine. The participants don't stop.",
+      "A hiking app logs your route even when your phone is off. The last entry was timestamped during your own funeral.",
+      "A surgeon realizes mid-operation that the patient on the table is slowly but unmistakably becoming someone else.",
+      "A pianist discovers a composition that, when played perfectly, causes every person in the audience to forget they were ever there — including themselves.",
+      "Something has been mirroring your life with perfect precision — same job, same apartment, same habits — but running exactly six months ahead of you.",
+      "An archivist cataloguing the records of a closed psychiatric facility finds the patient intake forms filled out in their own handwriting.",
+      "Your elderly neighbor asks you to water her plants while she visits family. The plants are shaped, you realize, like specific people you recognize.",
+      "A lighthouse keeper begins receiving distress signals on the emergency radio from a ship that sank in the North Atlantic in 1912.",
+      "The house you grew up in was demolished three years ago. This morning you received a piece of mail from it."
+    ],
+    "Romance": [
+      "Two rival restaurant critics, both writing anonymously for competing publications, are accidentally assigned to review the same tiny, nearly impossible to find restaurant on the same evening.",
+      "A pen pal correspondence conducted entirely by handwritten letters over ten years is about to become a first face-to-face meeting. One of them has been lying about something small that now feels enormous.",
+      "A florist and a funeral director share a building wall and have argued constantly through the air vent for two years. One morning the arguments stop, and the silence is somehow worse.",
+      "Two strangers are assigned the last two seats together on a transatlantic overnight flight. One is running away from something. The other is running toward it.",
+      "A secondhand bookshop owner keeps finding annotated copies of their all-time favorite novel donated to the store — each time with more personal, more intimate notes written in the margins.",
+      "Two researchers working on opposite ends of the same unsolved problem have been anonymously correcting each other's published papers for years. They are about to meet at a conference.",
+      "A professional bridesmaid hired for her twenty-fourth wedding recognizes the officiant from somewhere she cannot immediately place.",
+      "An online chess correspondence that began as a tournament qualifier has been running for three years. Both players have run out of moves they haven't already considered together.",
+      "A restaurateur and their most loyal regular have been having nearly the same conversation every Tuesday night for five years. This Tuesday, the regular orders something completely different.",
+      "Two strangers shelter from the same unexpected storm in the same doorway and have one perfect, complete evening together before the weather breaks and the world resumes.",
+      "A letter written and sealed fifty years ago is delivered, through a long chain of errors, to entirely the wrong address. The person who receives it decides to write back.",
+      "A documentary photographer and their extremely reluctant subject are contracted to spend one week together for a profile piece neither of them agreed to willingly.",
+      "Two neighbors have been returning each other's escaped cats for so long that both have begun to suspect there may not be as many distinct cats as originally thought.",
+      "A linguist and a sign-language interpreter are both assigned to the same diplomatic summit. They spend the whole week communicating entirely through gesture and expression.",
+      "A baker begins leaving a different pastry on a stranger's doorstep every morning after finding their lost dog. The stranger starts leaving thank-you notes. The notes get longer."
+    ],
+    "Mystery": [
+      "A private detective is hired to locate a missing person — and discovers that according to every available record, official and unofficial, that person has never existed.",
+      "Three strangers in three different cities each receive an identical sealed envelope on the same morning. Inside: a photograph of a house and a key that fits no lock they can find.",
+      "A forensic accountant following a decades-old financial trail across shell companies and dissolved partnerships finds that it ends with their own birth certificate.",
+      "Someone has been leaving written confessions in a church donation box every Sunday for years. No crime matching any description has ever been reported to any authority.",
+      "An art authenticator is called in to verify a newly surfaced painting. She recognizes the scene depicted — it is a place she has never been to, but has dreamed about every week for a year.",
+      "A cold case detective retires to a small coastal town expecting quiet. Their closest neighbor seems to know details about several of those cold cases that were never made public.",
+      "Every book in the victim's apartment has a single word underlined in pencil. Read in order of publication date, they form a complete sentence addressed to the detective.",
+      "A locksmith is called to open a safe sealed for forty years. Inside, among old documents, is a photograph of a person who appears to be the locksmith's parent at a young age.",
+      "Two identical crime scenes, separated by thirty years. The evidence is perfectly preserved in both — but in the older scene, it appears to have been placed there recently.",
+      "An obituary is published for someone who is very much alive, moderately furious, and now deeply interested in finding out who filed it and why.",
+      "A librarian notices that one particular book is checked out and returned on the same date every year — by a different borrower each time, none of whom remember checking it out.",
+      "A journalist investigating corruption in a small-town administration realizes that every source they interview, across days and different locations, gives them the exact same statement word for word.",
+      "A jeweler asked to resize an antique ring finds an inscription inside the band that matches a detail from an unsolved disappearance case from thirty years ago.",
+      "A historic building is demolished to clear land for development. During excavation, workers find a fully furnished room that does not appear on any blueprint or floor plan.",
+      "A translator realizes that the highly confidential document they have been paid to keep secret and render into English is a detailed confession to something that has not happened yet."
+    ],
+    "Thriller": [
+      "A cybersecurity analyst brought in to contain an active ransomware attack slowly realizes, with growing dread, that the code's architecture and signature match their own work from six months ago.",
+      "A diplomatic interpreter begins deliberately mistranslating during a critical summit. They have approximately one session left to correct it before something becomes irreversible.",
+      "A whistleblower already in hiding discovers that the journalist they trusted with their evidence has a documented prior connection to the organization they are exposing.",
+      "A surgeon is informed mid-operation, via a note passed by a scrub nurse, that the patient is wired to an explosive device and someone in the surgical theater is watching via the overhead camera.",
+      "An undercover operative's cover identity is flawless — too flawless. Someone has been carefully constructing it for years before the operative was ever assigned to the case.",
+      "A crisis hostage negotiator takes a call on a case that feels eerily familiar. The voice on the other end of the line is their own.",
+      "A passenger ferry with 200 people aboard loses all communication. The coast guard's system shows the vessel arrived at port safely two hours ago.",
+      "A data analyst at an international logistics company realizes that the shipping routes they have spent months optimizing are being used to move something other than the listed cargo.",
+      "A financial investigator follows a complex money trail across four continents over eighteen months — and finds that it terminates at a charitable foundation they personally established a decade ago.",
+      "A security consultant hired to stress-test a corporation's infrastructure discovers a backdoor that was installed several years before the corporation was incorporated.",
+      "A commuter train with no mechanical faults will not slow down. The driver discovers the brakes are being overridden remotely — from a signal originating inside the passenger cars.",
+      "A journalist publishes a major investigative piece on a government cover-up. Within hours, the story begins disappearing from the internet. Then the journalist begins forgetting writing it.",
+      "A crisis negotiator is called to a hostage situation and realizes the perpetrator has transcripts of every negotiation technique they have ever used — and is using them back.",
+      "A contract operative receives a new assignment. The target is a child. They begin trying to find out who hired them before they can be reassigned to someone else.",
+      "A city infrastructure planner discovers that an emergency maintenance tunnel running beneath the financial district that was sealed in 1987 has been in regular, daily use ever since."
+    ]
+  },
+  "art": {
+    "Sketch": {
+      "People": [
+        "Draw a street performer mid-act. Use only gestural lines — capture movement and expression over accuracy.",
+        "Sketch an elderly person's hands holding an object they have owned for decades. No faces, no bodies — just the hands and what they hold.",
+        "Portray two strangers sharing an umbrella, neither of them quite comfortable with the proximity. Let the body language carry everything.",
+        "Sketch a self-portrait without looking at any reference — draw only from your imperfect memory of your own face.",
+        "Draw a musician completely lost in concentration, the background reduced to the absolute minimum of lines.",
+        "Capture the precise moment just before someone laughs — the tension in the face before the release.",
+        "Sketch a child asleep in an awkward, impossible-seeming position. Emphasize the total physical abandon of deep sleep.",
+        "Draw a figure seen only from behind, looking at something just outside the right edge of the frame."
+      ],
+      "Landscapes": [
+        "Sketch a city skyline at golden hour using hatching for all shadows. Let the bare white paper stand in for every light surface.",
+        "Draw an empty park bench with only enough detail to clearly suggest the season and the weather.",
+        "Capture a narrow urban alleyway in as few deliberate lines as possible. Focus entirely on perspective, not surface detail.",
+        "Sketch a view through a window: the interior edge sharp and precisely defined, everything outside soft, loose, and impressionistic.",
+        "Draw a coastline from memory, working quickly. Let the inaccuracies and guesses become part of the composition.",
+        "Sketch a forest path that leads clearly toward something just outside the frame — something the viewer has to imagine.",
+        "Capture the exact visual edge where two weather systems meet: the clear light on one side, the approaching storm on the other.",
+        "Sketch a building in the process of being reclaimed — vines over brick, cracked concrete, nature returning."
+      ],
+      "Both": [
+        "A lone figure stands at the edge of a cliff above a churning sea. Give the figure three times as many lines as you give the ocean.",
+        "Draw two people in conversation against an architectural background. Use high detail for the figures and bare suggestion for the buildings.",
+        "A child runs across an open field toward a treeline with arms spread wide. Let the landscape dwarf them completely.",
+        "A market scene with one foregrounded vendor in sharp detail and all background figures reduced to the loosest suggestion.",
+        "A silhouette stands in an open doorway; the landscape visible through it is vivid and specific; everything else is near-empty.",
+        "A traveler rests on a mountain trail midway — the path continues both behind and ahead, equally unresolved.",
+        "A figure stands at a harbor with boats softly sketched in the background. Express waiting entirely through posture.",
+        "A solitary herder with animals on a flat plain at dusk — figure, animals, horizon, and last light."
+      ]
+    },
+    "Watercolor": {
+      "People": [
+        "Paint a full portrait using exclusively warm tones — no cool colors anywhere in the composition.",
+        "Capture the way a single light source from one window moves across the same face at three different times of day.",
+        "Paint a crowded café scene and let the figures dissolve into each other at their edges, foreground sharp and background pure wash.",
+        "Create a portrait that begins with tight detail at the center and gradually dissolves into loose, unpigmented washes at every edge.",
+        "Paint two people mid-difficult-conversation. Express the emotional temperature entirely through warm versus cool color choices, not through expression.",
+        "A dancer in full motion — let deliberate watercolor drips run downward to suggest speed and movement.",
+        "Paint a face emerging from darkness using only wet-on-wet technique. Control nothing about the edges.",
+        "Three small portraits of the same person: content, uncertain, and overwhelmed. Same palette, different temperature balance."
+      ],
+      "Landscapes": [
+        "Paint a rain-slicked street at night focusing entirely on reflections and the way color bleeds and blooms on wet surfaces.",
+        "Capture a mountain range at dusk using only five colors applied in wet-on-wet layers. Let them mix where they meet.",
+        "Paint a forest floor after heavy rainfall — moss, leaves, soft diffused light filtering down through a high canopy.",
+        "A seascape built from nothing but horizontal strokes in blues and grays of varying value. No land, no boats, no sky line.",
+        "Paint a field of summer wildflowers using primarily negative space — let the white paper serve as every bloom.",
+        "Capture the moment a storm finally breaks over flat agricultural land — a dramatic sky above a deliberately humble earth.",
+        "Paint a river at midday: the blinding bright surface reflections and the cool, deep shadows beneath the banks.",
+        "A snow-covered winter landscape using only the very palest, most diluted washes — suggest depth without reaching for dark values."
+      ],
+      "Both": [
+        "Paint a lone figure standing in heavy rain while the street around them completely dissolves into abstract color washes.",
+        "A small wooden boat at sea — treat the water and the sky with equal attention and detail as you give the vessel and its occupant.",
+        "Paint a person reading in a walled garden in afternoon light. Give the surrounding foliage as much presence as the figure.",
+        "A child running through deep autumn leaves — let the warmth of the color scheme unify figure and setting completely.",
+        "A figure walking away from the viewer into thick morning fog, the landscape gradually and completely consuming them.",
+        "Two people on a clifftop: the intimate, human-scale detail of their presence set against an epic horizontal sweep of sea and open sky.",
+        "A gardener at work in their plot — let the figure and landscape share exactly the same palette so they seem to grow from each other.",
+        "A market stall at early morning: seller, produce, and pale early light all painted with equal care and equal looseness."
+      ]
+    },
+    "Digital": {
+      "People": [
+        "Create a portrait using a hard restriction: exactly four colors, flat fills, and hard geometric edges. No gradients.",
+        "Design a character from a world where emotional states are expressed through visible bioluminescence beneath the skin.",
+        "Illustrate a person's true personality as their cast shadow — let the shadow tell the story the person themselves would never show.",
+        "Create a character portrait in the compositional and color language of a vintage travel poster from the 1930s or 1950s.",
+        "Design a figure built entirely from the objects that define their identity — profession, obsessions, memories — with no traditional anatomy visible.",
+        "Illustrate the same person twice in one composition: the version they present to the world, and the version that exists at 3am.",
+        "Create a portrait using only geometric shapes. Explore how few shapes you need before recognition completely breaks down.",
+        "Design a character set 500 years in the future. Let their clothing, tools, and modifications communicate their entire biography."
+      ],
+      "Landscapes": [
+        "Create an environment that exists somewhere between a specific dream you remember and a specific memory you're not certain is real.",
+        "Design a complete biome that does not exist on Earth. Make it feel ecologically plausible — there should be a logic to what lives there.",
+        "Illustrate the same landscape at dawn, midday, dusk, and deep night in four equal panels. Same composition, different light.",
+        "Create a cityscape from an impossible point of view — from underground looking up, from orbit looking down, or from inside a building's wall.",
+        "Design a planet landscape where the light source is a different color than our sun. Let every shadow and every highlight reflect that fact.",
+        "Illustrate a place that was once a major city, now fully reclaimed by vegetation and wildlife, set 200 years from now.",
+        "Create a detailed environment for a world with inverted gravity — where water flows upward and things fall toward the sky.",
+        "Design a landscape where the weather itself is a living entity visibly moving through and interacting with the environment."
+      ],
+      "Both": [
+        "Illustrate a person standing at the center of an environment that directly mirrors their current emotional state — the landscape is their interiority made visible.",
+        "Create a scene in which a figure's physical presence is visibly and slowly altering the landscape around them with every step.",
+        "Design a book cover illustration for a novel that does not exist but that you wish did. Title and author of your own invention.",
+        "Illustrate two figures at vastly different scales in the same landscape. Explore what changes about the story depending on which one you look at.",
+        "Create an illustration depicting the final scene of an imaginary epic — make the weight of everything that came before it visible.",
+        "Design an editorial illustration about the relationship between human beings and the technology that now mediates most of their experience.",
+        "Illustrate a myth or legend from a culture other than your own. Spend time researching the story and its visual traditions before you begin.",
+        "Create a double-exposure composition: one figure and one landscape that, overlaid, tell a single coherent story."
+      ]
+    },
+    "Oil": {
+      "People": [
+        "Paint a figure using Rembrandt lighting — one side fully illuminated, the other almost completely lost in rich, warm shadow.",
+        "Create a portrait of a person in their workspace, surrounded by the specific tools and evidence of their craft.",
+        "Paint a range of skin tones using only earth pigments — raw sienna, burnt umber, yellow ochre, and titanium white. No shortcuts.",
+        "Create a figure study in which the drapery is as expressive and as carefully observed as the face.",
+        "Paint two people in a domestic interior. Let the physical space between them carry all of the emotional weight of the scene.",
+        "Create a portrait using a heavy impasto technique. Let the texture and the marks of the palette knife express something that smooth blending cannot.",
+        "Paint a figure in motion using a restricted palette of no more than three hues plus white. Color temperature does the work of form.",
+        "Create a large-scale portrait of someone you know well, from direct observation if at all possible."
+      ],
+      "Landscapes": [
+        "Paint a landscape in the tradition of the Hudson River School — monumental scale, dramatic raking light, humanity made small.",
+        "Go outside and make a plein air study on location. Accept completely the challenges of changing light and imperfect conditions.",
+        "Paint a storm at sea as the Romantic painters understood it — nature as an overwhelming, indifferent, sublime force.",
+        "Create a moonlit night landscape using cold blue-violet shadow tones and the warmest possible light reserved for the moon itself.",
+        "Paint a winter landscape with primary attention to the subtle color variation within snow — the warm shadows, the cool highlights.",
+        "Create a landscape in which the sky occupies no less than three quarters of the total canvas area.",
+        "Paint a garden in peak midsummer — the controlled, pressurized wildness of everything growing at full capacity.",
+        "Paint the same view three times in three different amounts of detail: distant, middle, and close. Study what changes."
+      ],
+      "Both": [
+        "Paint a figure in a landscape where the palette of their clothing deliberately, purposefully clashes with the surrounding environment.",
+        "Create a pastoral scene — a person completely at rest in nature — and treat stillness itself as your primary compositional challenge.",
+        "Paint a figure working outdoors in extreme or dramatic weather. Let the landscape appear completely indifferent to their effort.",
+        "Create a scene of outdoor celebration — a festival, a gathering, a moment of collective joy — exploring the relationship between happiness and open space.",
+        "Paint a single figure in a vast landscape. Determine the minimum size a figure can be before their humanity disappears entirely.",
+        "Create an allegory: a figure in a landscape where figure and setting together represent an abstract concept — grief, hope, time, or change.",
+        "Paint a large, populated outdoor scene — a market, a festival, a demonstration — where people are woven inseparably into a specific, recognizable place.",
+        "Create a large landscape with a single small figure positioned anywhere in the composition. Consider carefully how that placement changes everything."
+      ]
+    },
+    "Acrylic": {
+      "People": [
+        "Create a bold portrait in a pop art sensibility — flat color areas, strong black outlines, high contrast, and primary palette.",
+        "Paint a complete figure study using only palette knives. No brushes permitted at any stage of the work.",
+        "Create a portrait painted directly over a collaged layer of newspaper, found text, or torn magazine pages.",
+        "Paint a figure study using a palette inspired entirely by a specific time of day that you find emotionally resonant.",
+        "Create a portrait using a split-complementary color scheme — choose one primary and the two colors flanking its complement.",
+        "Paint a figure that is in the process of merging into or emerging from a highly graphic, repeating patterned background.",
+        "Create a portrait with the graphic sensibility of 1970s design — flat color shapes, warm earthy palette, bold simplified forms.",
+        "Paint four small rapid portraits in one session, spending no more than twenty minutes on each. Commit to speed over refinement."
+      ],
+      "Landscapes": [
+        "Create a vivid, saturated landscape in colors from the opposite of reality — a deep purple sky, a red sea, a yellow mountain.",
+        "Paint an entire landscape using only a palette knife. No brushes at any point. Texture is now your primary descriptive tool.",
+        "Create a night city scene using neon accent colors pushing against a near-black background — sign light, window light, reflections.",
+        "Build a landscape using masking tape to create hard, clean geometric divisions between sky, land, and water.",
+        "Create an abstract interpretation of a real place you know well — keep the geography, abandon the realistic color.",
+        "Paint a landscape that reads completely differently at arm's length than it does from across the room.",
+        "Create a triptych: three same-sized panels showing the identical view in three different seasons.",
+        "Paint a landscape with a deliberately graphic, poster-like quality — simplified silhouettes, strong horizon, bold flat shapes."
+      ],
+      "Both": [
+        "Paint a street scene using bold, flattened graphic shapes. Simplify both people and buildings until they nearly become abstraction.",
+        "Create a mural-scale composition — even if small in actual dimension — depicting a figure or group in a place that is personally meaningful.",
+        "Paint an outdoor festival or celebration scene in vivid, high-chroma color. Embrace the chaos of many people in an open outdoor space.",
+        "Create a composition where the pattern or texture of a figure's clothing continues visually and seamlessly into the landscape behind them.",
+        "Paint a mythological or folkloric figure placed specifically and incongruously in a real, contemporary, recognizable landscape.",
+        "Create a painting that begins with precise representation at its center and becomes increasingly abstract toward every edge.",
+        "Paint a transit waiting space — a bus stop, train platform, or ferry queue — focusing on ordinary people in ordinary in-between time.",
+        "Create a bright, graphic illustration of a folk tale or childhood story using the full chromatic range of your palette."
+      ]
+    },
+    "Ink": {
+      "People": [
+        "Draw a complete portrait using only cross-hatching — no outlines at any point. Every edge and every form must be built entirely from intersecting lines.",
+        "Create a portrait using a single continuous line. The pen never leaves the paper from the first mark to the last.",
+        "Illustrate a figure in active motion using only ink splatter, flicks, and fast gestural marks. Deliberate accidents only.",
+        "Draw a crowded scene where every figure exists at a different dilution of ink — densest black in the foreground, palest wash in the distance.",
+        "Create five small portraits of five different faces using nothing but stippling — dots of varying density building every form.",
+        "Draw a figure using negative space as your primary tool — the ink defines everything surrounding the figure, and the figure itself remains as bare paper.",
+        "Illustrate a person's emotional state using entirely non-representational ink marks. No recognizable figure. Pure mark-making.",
+        "Create a portrait using large, committed brushstrokes in the spirit of sumi-e. No corrections. No hesitation. First marks are final marks."
+      ],
+      "Landscapes": [
+        "Draw a dense forest using only vertical lines. Let the closeness of the lines control how dark each section becomes.",
+        "Create a seascape built from horizontal ink strokes of varying weight and varying spacing. Nothing else in the composition.",
+        "Draw a city skyline at night using ink wash — build the atmospheric glow from multiple layers of increasingly diluted ink.",
+        "Illustrate a mountain landscape using only stippling. Every shadow, every gradient, every surface — nothing but dots.",
+        "Draw a stormy sky using the broadest, most aggressive brushstrokes you are willing to make.",
+        "Create a landscape where the foreground is rendered in the most obsessive detail you can manage and the background is almost completely bare.",
+        "Draw a river or waterfall using only flowing, calligraphic lines. The line quality itself should feel like moving water.",
+        "Create a night scene using ink wash where the white of the paper is the absolute brightest point and undiluted black ink is used only for the single darkest accent."
+      ],
+      "Both": [
+        "Draw a figure on a bridge above a city. Use sharp, precise lines for the figure and loose ink wash for everything beneath and around them.",
+        "Create an illustration in the tradition of classic pen-and-ink book illustrations: one figure in one richly detailed environment.",
+        "Draw a scene from folklore or mythology using bold, confident brushwork. No tentative marks.",
+        "Create a single comics panel — one isolated moment — and make every compositional and mark-making choice serve the story.",
+        "Draw a figure moving through a landscape that communicates unfamiliarity and strangeness — somewhere the figure clearly does not belong.",
+        "Illustrate the feeling of a specific piece of music or a specific poem: one figure in one landscape that captures the emotional register of the words or sounds.",
+        "Create a wide panoramic landscape with figures rendered as pure silhouette in the foreground, ink wash handling the entire sky.",
+        "Draw a market, bazaar, or street food scene: dense cross-hatching for the shadows under awnings, ink wash for the open-air atmosphere."
+      ]
+    },
+    "Pixel Art": {
+      "People": [
+        "Create a detailed character sprite for a game that does not exist. Include at minimum an idle, a walking cycle, and one action frame.",
+        "Design a pixel portrait of a specific person using a palette restricted to exactly sixteen colors.",
+        "Create a set of pixel emotion icons using the same face — eight different emotional states from the same base character.",
+        "Design a fantasy RPG character class of your own invention. The silhouette alone should communicate the role.",
+        "Create the same portrait at three sizes — 16x16, 32x32, and 64x64 pixels. Observe how complexity and expressiveness change at each scale.",
+        "Design a villain whose visual design makes their core motivation immediately readable without any text or context.",
+        "Create a complete pixel character sheet — front view, back view, side view, and three distinct facial expressions.",
+        "Design a non-human character — a construct, a creature, a spirit — that nonetheless communicates immediately recognizable and relatable emotion."
+      ],
+      "Landscapes": [
+        "Create a pixel landscape at three different times of day in three equal panels. Let only the palette change — not the composition.",
+        "Design a single-screen game environment that tells a complete story about who lives there without any characters present.",
+        "Create a pixel seascape with animated water — sketch the keyframes of a three-frame looping animation.",
+        "Design a fantasy biome in pixel art where the palette itself communicates the climate, the danger level, and the dominant weather.",
+        "Create a dungeon room using tile-based logic — design a space that would be interesting to navigate and that rewards exploration.",
+        "Design the same sky at four distinct times of day as four isolated horizontal strips. Study how palette drives atmosphere entirely.",
+        "Create a pixel cityscape — future, historical, or alternate — where the era is completely legible in the architectural details.",
+        "Design an outdoor environment from a specific real decade in history. Make the time period identifiable in every visual detail."
+      ],
+      "Both": [
+        "Create a single-screen pixel scene in which one character in one environment together tell a complete wordless story.",
+        "Design a title screen for an imaginary game — character, setting, title treatment, and overall mood in a single unified composition.",
+        "Create a pixel diorama: a character placed within a home environment that reflects their personality in every furnishing and detail.",
+        "Design a single story beat as a cutscene panel — the most pivotal moment in an imaginary narrative, expressed through composition alone.",
+        "Create a pixel art recreation or reinterpretation of a famous painting, translated fully into pixel-native visual language.",
+        "Design a small overworld map icon: a distinct figure standing in or before a distinct environment type.",
+        "Create a pixel animation key frame — a figure in a landscape at a single moment of high dramatic tension.",
+        "Design an NPC character and their home environment as a single cohesive visual package — the space and the person should feel inseparable."
+      ]
+    },
+    "Mixed Media": {
+      "People": [
+        "Create a portrait that combines printed or cut photographic fragments with hand-drawn or hand-painted elements. Let the seam between them be visible.",
+        "Build a figure from torn paper, found textures, and ink on a mixed surface. The construction process should be part of what the viewer sees.",
+        "Create a portrait in which the background is composed entirely of handwritten text — journal entries, letters, lists — relevant to the subject.",
+        "Combine watercolor washes for the large forms with gel pen detail work for the fine marks. Let the contrast between wet and precise be your primary texture.",
+        "Create a figure using fabric scraps, thread, and paint on a mixed substrate. The figure can be sewn as much as drawn or painted.",
+        "Build a portrait where the subject is painted or drawn and the surrounding background is constructed from maps, letters, printed ephemera, or found documents.",
+        "Combine relief printing or rubber stamp textures as an underlay with painted or drawn figures worked over the top.",
+        "Create a self-portrait using only whatever materials are physically present in your immediate space right now. Quantity and variety are not the point."
+      ],
+      "Landscapes": [
+        "Create a landscape using hand-painted paper that you then cut into depth planes and layer physically over one another.",
+        "Build a landscape incorporating actual collected natural materials — pressed leaves, dried soil, bark, sand — fixed permanently to the surface.",
+        "Create a topographic landscape by layering torn and folded paper into physical raised contour ridges across the surface.",
+        "Combine a printed photograph with hand-painted or drawn additions and subtractions to create something the original photograph never was.",
+        "Build a seascape incorporating actual sand, salt crystals, or translucent layers of medium to create physical surface depth.",
+        "Create a cityscape collage assembled entirely from architectural fragments cut from magazines, maps, technical drawings, and printed documents.",
+        "Layer tissue paper, ink wash, and deliberate mark-making to create a landscape of pure atmospheric mood without literal description.",
+        "Build a landscape from entirely unexpected materials — packaging, labels, receipts, ticket stubs — and discover what world they want to become."
+      ],
+      "Both": [
+        "Create a scene in which the figure is painted or drawn in a realistic mode and the landscape surrounding them is built entirely from collage.",
+        "Build a narrative image — one person in one place — where every distinct element is created from a different material or technique.",
+        "Create a response to a specific piece of music you are listening to right now. Let the figure and the landscape both be shaped by what you hear.",
+        "Combine printmaking with painting: ink a textured surface and print it as your ground layer, then paint or draw figures directly over the printed texture.",
+        "Build a portrait or landscape that is materially of a specific decade — use actual ephemera from that era as your primary building material.",
+        "Create a mythological or folkloric scene using mixed media. Choose materials that comment on or deepen the meaning of the story being depicted.",
+        "Combine embroidery or hand-stitching with paint or ink. Let thread become line, let fabric become ground, let stitch become mark.",
+        "Create an image with a hidden layer — something concealed within or beneath the visible materials that only close physical examination will reveal."
+      ]
+    }
+  }
+}
