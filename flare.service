@@ -1,0 +1,15 @@
+[Unit]
+Description=Flare API
+
+[Service]
+WorkingDirectory=/var/www/flare-api/API/bin/Release/net8.0/linux-x64/
+ExecStart=/usr/bin/dotnet /var/www/flare-api/API/bin/Release/net8.0/linux-x64/API.dll
+Restart=always
+RestartSec=10
+KillSignal=SIGINT
+SysletIdentifier=flare
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
+
+[Install]
+WantedBy=multi-user.target
