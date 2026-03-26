@@ -1,10 +1,11 @@
-package com.example.artprompter.data.local.dao
+package com.dcmoote.inkwell.data.local.dao
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import com.example.artprompter.data.local.entity.Prompt
+import com.dcmoote.inkwell.data.local.entity.Prompt
 import kotlinx.coroutines.flow.Flow
 
 @Dao
@@ -25,6 +26,12 @@ interface PromptDao {
     @Update
     suspend fun update(prompt: Prompt)
 
+    @Delete
+    suspend fun delete(prompt: Prompt)
+
     @Query("DELETE FROM prompts")
     suspend fun deleteAll()
+
+    @Query("DELETE FROM prompts WHERE timestamp >= :since")
+    suspend fun deletePromptsSince(since: Long)
 }

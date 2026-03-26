@@ -1,26 +1,36 @@
-package com.example.artprompter.ui.settings
+package com.dcmoote.inkwell.ui.settings
 
+import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.example.artprompter.data.local.dao.PromptDao
-import com.example.artprompter.data.prefs.UserPreferencesManager
+import androidx.work.ExistingPeriodicWorkPolicy
+import androidx.work.PeriodicWorkRequestBuilder
+import androidx.work.WorkManager
+import com.dcmoote.inkwell.data.local.dao.PromptDao
+import com.dcmoote.inkwell.data.prefs.UserPreferencesManager
+import com.dcmoote.inkwell.worker.DailyPromptWorker
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import java.util.Calendar
+import java.util.concurrent.TimeUnit
 
 class SettingsViewModel(
     private val prefs: UserPreferencesManager,
-    private val promptDao: PromptDao
+    private val promptDao: PromptDao,
+    private val context: Context
 ) : ViewModel() {
 
     data class State(
         val creativeType: String,
         val writingGenres: Set<String>,
         val artMediums: Set<String>,
-        val artSubject: String,
+        val artSubjects: Set<String>,
+        val artThemes: Set<String>,
+        val directionLevel: Int,
         val reminderEnabled: Boolean,
         val reminderHour: Int,
         val reminderMinute: Int,
@@ -33,7 +43,9 @@ class SettingsViewModel(
             creativeType = prefs.creativeType,
             writingGenres = prefs.writingGenres,
             artMediums = prefs.artMediums,
-            artSubject = prefs.artSubject,
+            artSubjects = prefs.artSubjects,
+            artThemes = prefs.artThemes,
+            directionLevel = prefs.directionLevel,
             reminderEnabled = prefs.reminderEnabled,
             reminderHour = prefs.reminderTimeHour,
             reminderMinute = prefs.reminderTimeMinute,
@@ -64,20 +76,62 @@ class SettingsViewModel(
         _state.update { it.copy(artMediums = updated) }
     }
 
-    fun setArtSubject(subject: String) {
-        prefs.artSubject = subject
-        _state.update { it.copy(artSubject = subject) }
+    fun toggleArtSubject(subject: String) {
+        val updated = prefs.artSubjects.toMutableSet().apply {
+            if (!add(subject)) remove(subject)
+        }
+        prefs.artSubjects = updated
+        _state.update { it.copy(artSubjects = updated) }
+    }
+
+    fun toggleArtTheme(theme: String) {
+        val updated = prefs.artThemes.toMutableSet().apply {
+            if (!add(theme)) remove(theme)
+        }
+        prefs.artThemes = updated
+        _state.update { it.copy(artThemes = updated) }
+    }
+
+    fun setDirectionLevel(level: Int) {
+        prefs.directionLevel = level
+        _state.update { it.copy(directionLevel = level) }
     }
 
     fun setReminderEnabled(enabled: Boolean) {
         prefs.reminderEnabled = enabled
         _state.update { it.copy(reminderEnabled = enabled) }
+        rescheduleReminder()
     }
 
     fun setReminderTime(hour: Int, minute: Int) {
         prefs.reminderTimeHour = hour
         prefs.reminderTimeMinute = minute
         _state.update { it.copy(reminderHour = hour, reminderMinute = minute) }
+        rescheduleReminder()
+    }
+
+    private fun rescheduleReminder() {
+        val wm = WorkManager.getInstance(context)
+        if (!prefs.reminderEnabled) {
+            wm.cancelUniqueWork("daily_prompt_reminder")
+            return
+        }
+        val now = Calendar.getInstance()
+        val target = Calendar.getInstance().apply {
+            set(Calendar.HOUR_OF_DAY, prefs.reminderTimeHour)
+            set(Calendar.MINUTE, prefs.reminderTimeMinute)
+            set(Calendar.SECOND, 0)
+            if (before(now)) add(Calendar.DAY_OF_YEAR, 1)
+        }
+        val initialDelay = target.timeInMillis - now.timeInMillis
+        val request = PeriodicWorkRequestBuilder<DailyPromptWorker>(1, TimeUnit.DAYS)
+            .setInitialDelay(initialDelay, TimeUnit.MILLISECONDS)
+            .build()
+        wm.enqueueUniquePeriodicWork(
+            "daily_prompt_reminder",
+            ExistingPeriodicWorkPolicy.UPDATE,
+            request
+        )
     }
 
     fun setUseAi(use: Boolean) {
@@ -94,12 +148,26 @@ class SettingsViewModel(
         viewModelScope.launch { promptDao.deleteAll() }
     }
 
+    fun resetOnboarding() {
+        viewModelScope.launch {
+            val startOfToday = Calendar.getInstance().apply {
+                set(Calendar.HOUR_OF_DAY, 0)
+                set(Calendar.MINUTE, 0)
+                set(Calendar.SECOND, 0)
+                set(Calendar.MILLISECOND, 0)
+            }.timeInMillis
+            promptDao.deletePromptsSince(startOfToday)
+            prefs.onboardingComplete = false
+        }
+    }
+
     class Factory(
         private val prefs: UserPreferencesManager,
-        private val promptDao: PromptDao
+        private val promptDao: PromptDao,
+        private val context: Context
     ) : ViewModelProvider.Factory {
         @Suppress("UNCHECKED_CAST")
         override fun <T : ViewModel> create(modelClass: Class<T>): T =
-            SettingsViewModel(prefs, promptDao) as T
+            SettingsViewModel(prefs, promptDao, context) as T
     }
 }

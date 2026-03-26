@@ -1,4 +1,4 @@
-package com.example.artprompter
+package com.dcmoote.inkwell
 
 import org.junit.Test
 

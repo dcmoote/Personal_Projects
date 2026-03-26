@@ -1,21 +1,29 @@
-package com.example.artprompter.ui.onboarding
+package com.dcmoote.inkwell.ui.onboarding
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -23,7 +31,6 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
-import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
@@ -41,22 +48,61 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.artprompter.ArtPrompterApplication
-import com.example.artprompter.data.prefs.UserPreferencesManager
+import com.dcmoote.inkwell.InkwellApplication
+import com.dcmoote.inkwell.data.prefs.UserPreferencesManager
 
-private val WRITING_GENRES = listOf("Fantasy", "Sci-Fi", "Horror", "Romance", "Mystery", "Thriller")
-private val ART_MEDIUMS = listOf(
-    "Sketch", "Watercolor", "Digital", "Oil", "Acrylic", "Ink", "Pixel Art", "Mixed Media"
+private val WRITING_GENRES = listOf(
+    "Fantasy", "Sci-Fi", "Horror", "Romance", "Mystery", "Thriller", "Poetry",
+    "Historical Fiction", "Adventure", "Flash Fiction", "Fairy Tale", "Dystopian",
+    "Humor", "Magical Realism", "Memoir"
 )
+private val ART_MEDIUMS = listOf(
+    "Sketch", "Watercolor", "Digital", "Oil", "Acrylic", "Ink", "Pixel Art", "Mixed Media",
+    "Charcoal", "Gouache", "Pastel", "Colored Pencil", "Linocut", "Marker", "Collage"
+)
+private val ART_SUBJECTS = listOf(
+    UserPreferencesManager.ArtSubject.PEOPLE,
+    UserPreferencesManager.ArtSubject.LANDSCAPES,
+    UserPreferencesManager.ArtSubject.ANIMALS,
+    UserPreferencesManager.ArtSubject.ABSTRACT
+)
+private val ART_THEMES = listOf(
+    UserPreferencesManager.ArtTheme.FANTASY,
+    UserPreferencesManager.ArtTheme.SCI_FI,
+    UserPreferencesManager.ArtTheme.DARK_GOTHIC,
+    UserPreferencesManager.ArtTheme.NATURE,
+    UserPreferencesManager.ArtTheme.URBAN,
+    UserPreferencesManager.ArtTheme.MYTHOLOGY,
+    UserPreferencesManager.ArtTheme.SURREAL,
+    UserPreferencesManager.ArtTheme.HORROR,
+    UserPreferencesManager.ArtTheme.VINTAGE,
+    UserPreferencesManager.ArtTheme.KAWAII
+)
+
+// Returns the ordered list of step numbers the user will visit for their creative type.
+// Writing: CreativeType → WritingGenres → PromptDirection → Reminder (4 steps)
+// Art:     CreativeType → ArtMedium → ArtSubject → ArtTheme → PromptDirection → Reminder (6 steps)
+// Both:    CreativeType → WritingGenres → ArtMedium → ArtSubject → ArtTheme → PromptDirection → Reminder (7 steps)
+private fun pathFor(creativeType: String): List<Int> = when (creativeType) {
+    UserPreferencesManager.CreativeType.WRITING -> listOf(1, 2, 6, 7)
+    UserPreferencesManager.CreativeType.ART -> listOf(1, 3, 4, 5, 6, 7)
+    else -> listOf(1, 2, 3, 4, 5, 6, 7)
+}
 
 @Composable
 fun OnboardingScreen(onComplete: () -> Unit) {
-    val prefs = (LocalContext.current.applicationContext as ArtPrompterApplication)
+    val prefs = (LocalContext.current.applicationContext as InkwellApplication)
         .container.userPreferencesManager
     val vm: OnboardingViewModel = viewModel(factory = OnboardingViewModel.Factory(prefs))
     val state by vm.state.collectAsState()
+
+    val path = remember(state.creativeType) { pathFor(state.creativeType) }
+    val totalSteps = path.size
+    fun stepIndex(n: Int) = (path.indexOf(n) + 1).coerceAtLeast(1)
 
     Surface(
         modifier = Modifier.fillMaxSize(),
@@ -66,32 +112,58 @@ fun OnboardingScreen(onComplete: () -> Unit) {
             0 -> WelcomeStep(onNext = { vm.advance() })
             1 -> CreativeTypeStep(
                 selected = state.creativeType,
+                stepIndex = stepIndex(1),
+                totalSteps = totalSteps,
                 onSelect = vm::setCreativeType,
                 onBack = { vm.back() },
                 onNext = { vm.advance() }
             )
             2 -> WritingGenresStep(
                 selected = state.writingGenres,
+                stepIndex = stepIndex(2),
+                totalSteps = totalSteps,
                 onToggle = vm::toggleWritingGenre,
                 onBack = { vm.back() },
                 onNext = { vm.advance() }
             )
             3 -> ArtMediumStep(
                 selected = state.artMediums,
+                stepIndex = stepIndex(3),
+                totalSteps = totalSteps,
                 onToggle = vm::toggleArtMedium,
                 onBack = { vm.back() },
                 onNext = { vm.advance() }
             )
             4 -> ArtSubjectStep(
-                selected = state.artSubject,
-                onSelect = vm::setArtSubject,
+                selected = state.artSubjects,
+                stepIndex = stepIndex(4),
+                totalSteps = totalSteps,
+                onToggle = vm::toggleArtSubject,
                 onBack = { vm.back() },
                 onNext = { vm.advance() }
             )
-            5 -> ReminderStep(
+            5 -> ArtThemeStep(
+                selected = state.artThemes,
+                stepIndex = stepIndex(5),
+                totalSteps = totalSteps,
+                onToggle = vm::toggleArtTheme,
+                onBack = { vm.back() },
+                onNext = { vm.advance() }
+            )
+            6 -> PromptDirectionStep(
+                selected = state.directionLevel,
+                stepIndex = stepIndex(6),
+                totalSteps = totalSteps,
+                onSelect = vm::setDirectionLevel,
+                onBack = { vm.back() },
+                onNext = { vm.advance() }
+            )
+            7 -> ReminderStep(
                 enabled = state.reminderEnabled,
                 hour = state.reminderHour,
                 minute = state.reminderMinute,
+                stepIndex = stepIndex(7),
+                totalSteps = totalSteps,
                 onToggle = vm::setReminderEnabled,
                 onTimeChange = vm::setReminderTime,
                 onBack = { vm.back() },
@@ -106,7 +178,8 @@ fun OnboardingScreen(onComplete: () -> Unit) {
 
 @Composable
 private fun StepScaffold(
-    step: Int,
+    stepIndex: Int,
+    totalSteps: Int,
     onBack: (() -> Unit)?,
     nextLabel: String = "Next",
     onNext: () -> Unit,
@@ -118,13 +191,32 @@ private fun StepScaffold(
             .fillMaxSize()
             .padding(horizontal = 24.dp, vertical = 48.dp)
     ) {
-        if (step > 0) {
-            LinearProgressIndicator(
-                progress = { step / 5f },
-                modifier = Modifier.fillMaxWidth()
-            )
-            Spacer(Modifier.height(32.dp))
+        // Step dot indicator — reflects actual path length
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            for (i in 1..totalSteps) {
+                val isCurrent = i == stepIndex
+                val isPast = i < stepIndex
+                Box(
+                    modifier = Modifier
+                        .padding(horizontal = 4.dp)
+                        .size(if (isCurrent) 10.dp else 7.dp)
+                        .background(
+                            color = when {
+                                isPast -> MaterialTheme.colorScheme.primary.copy(alpha = 0.4f)
+                                isCurrent -> MaterialTheme.colorScheme.primary
+                                else -> MaterialTheme.colorScheme.surfaceVariant
+                            },
+                            shape = CircleShape
+                        )
+                )
+            }
         }
+
+        Spacer(Modifier.height(32.dp))
 
         Column(
             modifier = Modifier
@@ -157,38 +249,69 @@ private fun WelcomeStep(onNext: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(horizontal = 24.dp, vertical = 48.dp),
-        verticalArrangement = Arrangement.Center
+            .padding(horizontal = 28.dp)
     ) {
+        Spacer(Modifier.weight(1f))
+
         Text(
-            "Let's set up your\ncreative space",
-            style = MaterialTheme.typography.displaySmall,
+            text = "INKWELL",
+            style = MaterialTheme.typography.labelLarge.copy(
+                letterSpacing = 3.sp,
+                fontWeight = androidx.compose.ui.text.font.FontWeight.Bold
+            ),
             color = MaterialTheme.colorScheme.primary
         )
-        Spacer(Modifier.height(16.dp))
+
+        Spacer(Modifier.height(20.dp))
+
         Text(
-            "Personalized prompts tailored to your creative style, delivered daily.",
+            text = "Your daily\ncreative\nbrief.",
+            style = MaterialTheme.typography.displaySmall,
+            color = MaterialTheme.colorScheme.onSurface
+        )
+
+        Spacer(Modifier.height(20.dp))
+
+        // Editorial accent dash
+        Box(
+            modifier = Modifier
+                .width(32.dp)
+                .height(2.dp)
+                .background(MaterialTheme.colorScheme.secondary)
+        )
+
+        Spacer(Modifier.height(20.dp))
+
+        Text(
+            text = "One prompt. Tailored to your style.\nDelivered every day.",
             style = MaterialTheme.typography.bodyLarge,
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
-        Spacer(Modifier.height(48.dp))
+
+        Spacer(Modifier.weight(1.5f))
+
         Button(
             onClick = onNext,
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth(),
+            shape = MaterialTheme.shapes.medium
         ) {
             Text("Get Started")
         }
+
+        Spacer(Modifier.height(40.dp))
     }
 }
 
 @Composable
 private fun CreativeTypeStep(
     selected: String,
+    stepIndex: Int,
+    totalSteps: Int,
     onSelect: (String) -> Unit,
     onBack: () -> Unit,
     onNext: () -> Unit
 ) {
-    StepScaffold(step = 1, onBack = onBack, onNext = onNext) {
+    StepScaffold(stepIndex = stepIndex, totalSteps = totalSteps, onBack = onBack, onNext = onNext) {
         Text("What do you create?", style = MaterialTheme.typography.headlineMedium)
         Spacer(Modifier.height(8.dp))
         Text(
@@ -223,12 +346,15 @@ private fun CreativeTypeStep(
 @Composable
 private fun WritingGenresStep(
     selected: Set<String>,
+    stepIndex: Int,
+    totalSteps: Int,
     onToggle: (String) -> Unit,
     onBack: () -> Unit,
     onNext: () -> Unit
 ) {
     StepScaffold(
-        step = 2,
+        stepIndex = stepIndex,
+        totalSteps = totalSteps,
         onBack = onBack,
         onNext = onNext,
         nextEnabled = selected.isNotEmpty()
@@ -241,23 +367,22 @@ private fun WritingGenresStep(
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
         Spacer(Modifier.height(24.dp))
-        MultiSelectChipGroup(
-            options = WRITING_GENRES,
-            selected = selected,
-            onToggle = onToggle
-        )
+        MultiSelectChipGroup(options = WRITING_GENRES, selected = selected, onToggle = onToggle)
     }
 }
 
 @Composable
 private fun ArtMediumStep(
     selected: Set<String>,
+    stepIndex: Int,
+    totalSteps: Int,
     onToggle: (String) -> Unit,
     onBack: () -> Unit,
     onNext: () -> Unit
 ) {
     StepScaffold(
-        step = 3,
+        stepIndex = stepIndex,
+        totalSteps = totalSteps,
         onBack = onBack,
         onNext = onNext,
         nextEnabled = selected.isNotEmpty()
@@ -270,49 +395,103 @@ private fun ArtMediumStep(
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
         Spacer(Modifier.height(24.dp))
-        MultiSelectChipGroup(
-            options = ART_MEDIUMS,
-            selected = selected,
-            onToggle = onToggle
-        )
+        MultiSelectChipGroup(options = ART_MEDIUMS, selected = selected, onToggle = onToggle)
     }
 }
 
 @Composable
 private fun ArtSubjectStep(
-    selected: String,
-    onSelect: (String) -> Unit,
+    selected: Set<String>,
+    stepIndex: Int,
+    totalSteps: Int,
+    onToggle: (String) -> Unit,
     onBack: () -> Unit,
     onNext: () -> Unit
 ) {
-    StepScaffold(step = 4, onBack = onBack, onNext = onNext) {
+    StepScaffold(
+        stepIndex = stepIndex,
+        totalSteps = totalSteps,
+        onBack = onBack,
+        onNext = onNext,
+        nextEnabled = selected.isNotEmpty()
+    ) {
         Text("What do you love to draw?", style = MaterialTheme.typography.headlineMedium)
         Spacer(Modifier.height(8.dp))
         Text(
-            "Choose your subject focus.",
+            "Select at least one subject.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(Modifier.height(24.dp))
+        MultiSelectChipGroup(options = ART_SUBJECTS, selected = selected, onToggle = onToggle)
+    }
+}
+
+@Composable
+private fun ArtThemeStep(
+    selected: Set<String>,
+    stepIndex: Int,
+    totalSteps: Int,
+    onToggle: (String) -> Unit,
+    onBack: () -> Unit,
+    onNext: () -> Unit
+) {
+    StepScaffold(
+        stepIndex = stepIndex,
+        totalSteps = totalSteps,
+        onBack = onBack,
+        onNext = onNext,
+        nextEnabled = selected.isNotEmpty()
+    ) {
+        Text("What themes inspire you?", style = MaterialTheme.typography.headlineMedium)
+        Spacer(Modifier.height(8.dp))
+        Text(
+            "Select at least one theme to guide your prompts.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(Modifier.height(24.dp))
+        MultiSelectChipGroup(options = ART_THEMES, selected = selected, onToggle = onToggle)
+    }
+}
+
+@Composable
+private fun PromptDirectionStep(
+    selected: Int,
+    stepIndex: Int,
+    totalSteps: Int,
+    onSelect: (Int) -> Unit,
+    onBack: () -> Unit,
+    onNext: () -> Unit
+) {
+    StepScaffold(stepIndex = stepIndex, totalSteps = totalSteps, onBack = onBack, onNext = onNext) {
+        Text("How much guidance?", style = MaterialTheme.typography.headlineMedium)
+        Spacer(Modifier.height(8.dp))
+        Text(
+            "Choose how detailed you want your prompts to be.",
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
         Spacer(Modifier.height(32.dp))
         SelectionCard(
-            title = "People & Portraits",
-            subtitle = "Figures, faces, and character studies",
-            selected = selected == UserPreferencesManager.ArtSubject.PEOPLE,
-            onClick = { onSelect(UserPreferencesManager.ArtSubject.PEOPLE) }
+            title = "Minimal",
+            subtitle = "A word or short phrase — just a spark",
+            selected = selected == UserPreferencesManager.DirectionLevel.MINIMAL,
+            onClick = { onSelect(UserPreferencesManager.DirectionLevel.MINIMAL) }
         )
         Spacer(Modifier.height(12.dp))
         SelectionCard(
-            title = "Landscapes & Nature",
-            subtitle = "Environments, scenery, and the natural world",
-            selected = selected == UserPreferencesManager.ArtSubject.LANDSCAPES,
-            onClick = { onSelect(UserPreferencesManager.ArtSubject.LANDSCAPES) }
+            title = "Guided",
+            subtitle = "A concept with mood — you fill in the details",
+            selected = selected == UserPreferencesManager.DirectionLevel.GUIDED,
+            onClick = { onSelect(UserPreferencesManager.DirectionLevel.GUIDED) }
         )
         Spacer(Modifier.height(12.dp))
         SelectionCard(
-            title = "Both",
-            subtitle = "A mix of subjects",
-            selected = selected == UserPreferencesManager.ArtSubject.BOTH,
-            onClick = { onSelect(UserPreferencesManager.ArtSubject.BOTH) }
+            title = "Detailed",
+            subtitle = "Full specifics — just pick up the brush or pen",
+            selected = selected == UserPreferencesManager.DirectionLevel.DETAILED,
+            onClick = { onSelect(UserPreferencesManager.DirectionLevel.DETAILED) }
         )
     }
 }
@@ -323,6 +502,8 @@ private fun ReminderStep(
     enabled: Boolean,
     hour: Int,
     minute: Int,
+    stepIndex: Int,
+    totalSteps: Int,
     onToggle: (Boolean) -> Unit,
     onTimeChange: (Int, Int) -> Unit,
     onBack: () -> Unit,
@@ -331,7 +512,8 @@ private fun ReminderStep(
     var showTimePicker by remember { mutableStateOf(false) }
 
     StepScaffold(
-        step = 5,
+        stepIndex = stepIndex,
+        totalSteps = totalSteps,
         onBack = onBack,
         nextLabel = "Finish",
         onNext = onComplete
@@ -411,41 +593,70 @@ private fun SelectionCard(
     Card(
         onClick = onClick,
         modifier = Modifier.fillMaxWidth(),
+        shape = MaterialTheme.shapes.small,
         border = BorderStroke(
-            width = if (selected) 2.dp else 1.dp,
+            width = if (selected) 1.5.dp else 1.dp,
             color = if (selected) MaterialTheme.colorScheme.primary
             else MaterialTheme.colorScheme.outlineVariant
         ),
         colors = CardDefaults.cardColors(
-            containerColor = if (selected)
-                MaterialTheme.colorScheme.primary.copy(alpha = 0.08f)
-            else MaterialTheme.colorScheme.surface
+            containerColor = MaterialTheme.colorScheme.surface
         )
     ) {
         Row(
-            modifier = Modifier.padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(androidx.compose.foundation.layout.IntrinsicSize.Min)
         ) {
-            Column(modifier = Modifier.weight(1f)) {
-                Text(title, style = MaterialTheme.typography.titleMedium)
-                Spacer(Modifier.height(2.dp))
-                Text(
-                    subtitle,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
+            // Left accent bar — appears only when selected
+            if (selected) {
+                Box(
+                    modifier = Modifier
+                        .width(3.dp)
+                        .fillMaxHeight()
+                        .background(MaterialTheme.colorScheme.primary)
                 )
             }
-            if (selected) {
-                Icon(
-                    Icons.Default.Check,
-                    contentDescription = null,
-                    tint = MaterialTheme.colorScheme.primary
-                )
+            Row(
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(
+                        start = if (selected) 14.dp else 16.dp,
+                        end = 16.dp,
+                        top = 16.dp,
+                        bottom = 16.dp
+                    ),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Column(modifier = Modifier.weight(1f)) {
+                    Text(
+                        title,
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = if (selected) androidx.compose.ui.text.font.FontWeight.SemiBold
+                                     else androidx.compose.ui.text.font.FontWeight.Normal
+                    )
+                    Spacer(Modifier.height(2.dp))
+                    Text(
+                        subtitle,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+                if (selected) {
+                    Spacer(Modifier.width(8.dp))
+                    Icon(
+                        Icons.Default.Check,
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.size(18.dp)
+                    )
+                }
             }
         }
     }
 }
 
+@OptIn(ExperimentalLayoutApi::class, ExperimentalMaterial3Api::class)
 @Composable
 private fun MultiSelectChipGroup(
     options: List<String>,

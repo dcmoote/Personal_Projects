@@ -1,4 +1,4 @@
-package com.example.artprompter.data.prefs
+package com.dcmoote.inkwell.data.prefs
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -24,9 +24,17 @@ class UserPreferencesManager(context: Context) {
         get() = prefs.getStringSet(KEY_ART_MEDIUMS, emptySet()) ?: emptySet()
         set(value) = prefs.edit().putStringSet(KEY_ART_MEDIUMS, value).apply()
 
-    var artSubject: String
-        get() = prefs.getString(KEY_ART_SUBJECT, ArtSubject.BOTH) ?: ArtSubject.BOTH
-        set(value) = prefs.edit().putString(KEY_ART_SUBJECT, value).apply()
+    var artSubjects: Set<String>
+        get() = prefs.getStringSet(KEY_ART_SUBJECTS, emptySet()) ?: emptySet()
+        set(value) = prefs.edit().putStringSet(KEY_ART_SUBJECTS, value).apply()
+
+    var artThemes: Set<String>
+        get() = prefs.getStringSet(KEY_ART_THEMES, emptySet()) ?: emptySet()
+        set(value) = prefs.edit().putStringSet(KEY_ART_THEMES, value).apply()
+
+    var directionLevel: Int
+        get() = prefs.getInt(KEY_DIRECTION_LEVEL, DirectionLevel.GUIDED)
+        set(value) = prefs.edit().putInt(KEY_DIRECTION_LEVEL, value).apply()
 
     var reminderEnabled: Boolean
         get() = prefs.getBoolean(KEY_REMINDER_ENABLED, false)
@@ -55,9 +63,29 @@ class UserPreferencesManager(context: Context) {
     }
 
     object ArtSubject {
-        const val PEOPLE = "PEOPLE"
-        const val LANDSCAPES = "LANDSCAPES"
-        const val BOTH = "BOTH"
+        const val PEOPLE = "People"
+        const val LANDSCAPES = "Landscapes"
+        const val ANIMALS = "Animals"
+        const val ABSTRACT = "Abstract"
+    }
+
+    object DirectionLevel {
+        const val MINIMAL = 1  // Single word or short phrase — just a seed
+        const val GUIDED = 2   // A sentence or two — concept and mood
+        const val DETAILED = 3 // Full specifics — just pick up the brush/pen
+    }
+
+    object ArtTheme {
+        const val FANTASY = "Fantasy"
+        const val SCI_FI = "Sci-Fi"
+        const val DARK_GOTHIC = "Dark / Gothic"
+        const val NATURE = "Nature"
+        const val URBAN = "Urban"
+        const val MYTHOLOGY = "Mythology"
+        const val SURREAL = "Surreal"
+        const val HORROR = "Horror"
+        const val VINTAGE = "Vintage"
+        const val KAWAII = "Kawaii"
     }
 
     object ThemeMode {
@@ -72,7 +100,9 @@ class UserPreferencesManager(context: Context) {
         private const val KEY_CREATIVE_TYPE = "creative_type"
         private const val KEY_WRITING_GENRES = "writing_genres"
         private const val KEY_ART_MEDIUMS = "art_mediums"
-        private const val KEY_ART_SUBJECT = "art_subject"
+        private const val KEY_ART_SUBJECTS = "art_subjects"
+        private const val KEY_ART_THEMES = "art_themes"
+        private const val KEY_DIRECTION_LEVEL = "direction_level"
         private const val KEY_REMINDER_ENABLED = "reminder_enabled"
         private const val KEY_REMINDER_HOUR = "reminder_hour"
         private const val KEY_REMINDER_MINUTE = "reminder_minute"

@@ -1,4 +1,4 @@
-package com.example.artprompter.util
+package com.dcmoote.inkwell.util
 
 import android.content.Context
 import com.google.gson.Gson

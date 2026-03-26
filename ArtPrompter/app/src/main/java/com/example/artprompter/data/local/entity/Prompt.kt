@@ -1,4 +1,4 @@
-package com.example.artprompter.data.local.entity
+package com.dcmoote.inkwell.data.local.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

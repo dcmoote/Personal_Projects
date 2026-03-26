@@ -1,11 +1,11 @@
-package com.example.artprompter.data.local
+package com.dcmoote.inkwell.data.local
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.artprompter.data.local.dao.PromptDao
-import com.example.artprompter.data.local.entity.Prompt
+import com.dcmoote.inkwell.data.local.dao.PromptDao
+import com.dcmoote.inkwell.data.local.entity.Prompt
 
 @Database(entities = [Prompt::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {

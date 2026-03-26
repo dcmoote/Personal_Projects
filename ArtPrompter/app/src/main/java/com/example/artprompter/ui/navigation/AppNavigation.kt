@@ -1,4 +1,4 @@
-package com.example.artprompter.ui.navigation
+package com.dcmoote.inkwell.ui.navigation
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -21,25 +21,27 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.example.artprompter.ArtPrompterApplication
-import com.example.artprompter.ui.AppViewModel
-import com.example.artprompter.ui.history.HistoryScreen
-import com.example.artprompter.ui.home.HomeScreen
-import com.example.artprompter.ui.onboarding.OnboardingScreen
-import com.example.artprompter.ui.settings.SettingsScreen
+import com.dcmoote.inkwell.InkwellApplication
+import com.dcmoote.inkwell.ui.AppViewModel
+import com.dcmoote.inkwell.ui.history.HistoryScreen
+import com.dcmoote.inkwell.ui.home.HomeScreen
+import com.dcmoote.inkwell.ui.onboarding.OnboardingScreen
+import com.dcmoote.inkwell.ui.paywall.PaywallScreen
+import com.dcmoote.inkwell.ui.settings.SettingsScreen
 
 sealed class Screen(val route: String, val label: String, val icon: ImageVector) {
-    object Home : Screen("home", "Home", Icons.Default.Home)
+    object Home : Screen("home", "Today", Icons.Default.Home)
     object History : Screen("history", "History", Icons.Default.List)
     object Settings : Screen("settings", "Settings", Icons.Default.Settings)
 }
 
 private val bottomNavScreens = listOf(Screen.Home, Screen.History, Screen.Settings)
 private const val ROUTE_ONBOARDING = "onboarding"
+private const val ROUTE_PAYWALL = "paywall"
 
 @Composable
 fun AppNavigation(appViewModel: AppViewModel) {
-    val prefs = (LocalContext.current.applicationContext as ArtPrompterApplication)
+    val prefs = (LocalContext.current.applicationContext as InkwellApplication)
         .container.userPreferencesManager
     val startDestination = if (prefs.onboardingComplete) Screen.Home.route else ROUTE_ONBOARDING
 
@@ -92,7 +94,20 @@ fun AppNavigation(appViewModel: AppViewModel) {
             }
             composable(Screen.Home.route) { HomeScreen() }
             composable(Screen.History.route) { HistoryScreen() }
-            composable(Screen.Settings.route) { SettingsScreen(appViewModel) }
+            composable(Screen.Settings.route) {
+                SettingsScreen(
+                    appViewModel = appViewModel,
+                    onResetOnboarding = {
+                        navController.navigate(ROUTE_ONBOARDING) {
+                            popUpTo(0) { inclusive = true }
+                        }
+                    },
+                    onGoProClick = { navController.navigate(ROUTE_PAYWALL) }
+                )
+            }
+            composable(ROUTE_PAYWALL) {
+                PaywallScreen(onBack = { navController.popBackStack() })
+            }
         }
     }
 }

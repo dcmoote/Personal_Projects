@@ -101,6 +101,135 @@
       "A crisis negotiator is called to a hostage situation and realizes the perpetrator has transcripts of every negotiation technique they have ever used — and is using them back.",
       "A contract operative receives a new assignment. The target is a child. They begin trying to find out who hired them before they can be reassigned to someone else.",
       "A city infrastructure planner discovers that an emergency maintenance tunnel running beneath the financial district that was sealed in 1987 has been in regular, daily use ever since."
+    ],
+    "Poetry": [
+      "Write a poem that begins with the last thing you thought about before falling asleep and ends with the first thing you thought about upon waking.",
+      "Compose a poem from the perspective of an object that has changed hands many times and absorbed each owner's particular grief.",
+      "Write a poem in which the same line appears at the beginning and end, but by the end it means something entirely different.",
+      "Compose a love poem in which the word 'love' is never used, and the beloved is never directly addressed.",
+      "Write a poem that is also a map — the reader should be able to follow it somewhere, even if that somewhere is not a physical place.",
+      "Compose a poem about a specific sound you heard today that no one else seemed to notice.",
+      "Write a poem in which the line breaks do the emotional work — where you put the pause changes everything the words mean.",
+      "Compose a poem from the final message left by something ending: a season, a friendship, a species, a star.",
+      "Write a poem in seven sentences, each exactly one line long, in which each sentence contradicts the one before it.",
+      "Compose a poem in which the speaker is giving instructions for something that cannot actually be done.",
+      "Write a poem set entirely within the duration of a single breath.",
+      "Compose an elegy for something that has not yet been lost but that you already sense slipping.",
+      "Write a poem in which the landscape around you is addressed directly, as though it might answer.",
+      "Compose a poem built from borrowed language — phrases overheard today, signs you passed, fragments half-remembered — shaped into something completely yours.",
+      "Write a poem about an ordinary Tuesday in a voice that treats it with the gravity and attention of an epic."
+    ],
+    "Historical Fiction": [
+      "A Roman legionnaire stationed at Hadrian's Wall receives a letter from home that arrives years too late, bearing news that changes everything he thought he was defending.",
+      "A scribe in Alexandria copies a document that someone powerful very much does not want copied. The decision to finish it is not one they made lightly.",
+      "A woman in medieval Florence is the only person in the city who knows the plague has already arrived. She has three days before it becomes undeniable.",
+      "A samurai in the last days of the Edo period watches a steam train pass for the first time and understands, precisely and immediately, what it means for everything he has ever believed.",
+      "A court painter commissioned to idealize the king cannot make herself paint the lie with any more conviction. The portrait is due at the end of the week.",
+      "Two soldiers from opposing armies have been using the same abandoned farmhouse to sleep in on alternating nights for three months. Tonight they arrive at the same time.",
+      "An archaeologist in 1922 Cairo overhears two British officials casually dividing the contents of an unregistered tomb between themselves. She has to decide what to do with what she knows.",
+      "A lighthouse keeper on the Outer Banks during the American Civil War is given contradictory orders by two different admirals on the same morning.",
+      "The last imperial concubine of the Qing Dynasty spends the evening after the emperor's abdication trying to decide what a regular life looks like.",
+      "A suffragist chained to the gates of Parliament has been there for six hours. An older woman walks past, pauses, and keeps walking. She turns around on the next block.",
+      "A navigator on Columbus's third voyage realizes they are lost. He knows it, the captain knows it, and neither of them will say so out loud.",
+      "A translator at a major peace summit discovers that both delegations are working from different versions of the same clause. The war has not technically ended."
+    ],
+    "Adventure": [
+      "A courier crossing a mountain pass in the dead of winter carries a sealed letter she is forbidden to read. Halfway through the pass, she drops it, and the seal breaks.",
+      "An expedition to map the last blank section of a continent has reached the point where the last expedition turned back. They push on for one more day.",
+      "A ship's navigator has been at sea for eleven months without sighting land. This morning the stars are wrong.",
+      "Two rival treasure hunters are the only survivors of a collapse deep underground. There is one way out and only one of them knows it.",
+      "A wilderness guide agrees to take one final expedition into territory she vowed never to return to. Her reason for going back is the same as her reason for leaving.",
+      "A city-raised journalist is assigned to spend a month embedded with a search-and-rescue team in the backcountry. On day three, they become the thing being searched for.",
+      "A climber one hundred feet from a summit decides to turn back for the first time in their career. Something about the conditions is not right, and they trust it.",
+      "A smuggler's ship is boarded by two different navies at the same time. The cargo is not what either navy was looking for, but it is worse.",
+      "A cartographer hired to complete a survey of an uncharted river begins finding marks she cannot have made herself — but that are definitely in her handwriting.",
+      "A pilot flying a solo circumnavigation lands in a country that doesn't appear on any chart she has. The runway is in good repair.",
+      "An amateur diver in the Aegean finds what might be an ancient shipwreck. The government says it doesn't exist. So does the dive shop. So does their map.",
+      "A solo sailor rounding Cape Horn in winter realizes their emergency radio has been transmitting perfectly — but no one has been responding for six days."
+    ],
+    "Flash Fiction": [
+      "Write a complete story in exactly 100 words. Use the last sentence to recontextualize everything that came before it.",
+      "Two characters. One setting. One overheard sentence that changes the meaning of the preceding six months. 250 words maximum.",
+      "Tell a love story from beginning to end using only the timestamps and character names from a text message chain. No message content.",
+      "Write a ghost story in which the ghost is never mentioned — only suggested through the reactions of everyone else in the scene.",
+      "Write the first and last paragraph of a novel that does not exist. Make the reader wish it did.",
+      "A story told entirely through a series of increasingly strange items on a grocery list.",
+      "Six sentences. Two characters. The only thing they are doing is passing each other in a hallway. Make it devastating.",
+      "A story in which the important thing happens entirely in the white space between the two halves.",
+      "Write a scene in which nothing literally happens, but everything changes.",
+      "Three postcards from the same person over the course of thirty years. Same closing line each time. It means something different every time.",
+      "Tell a complete story using only dialogue. No action, no description. Every word spoken. The situation must be clear by the end.",
+      "A story in which the last sentence is the title, and the title is the last sentence. Everything in between makes it land differently each time."
+    ],
+    "Fairy Tale": [
+      "A witch who has collected years from everyone she has ever wronged finds herself in possession of a life far longer than she knows what to do with.",
+      "In a kingdom where names hold power, a child is born whose name cannot be spoken without crying. The court philosophers argue about this for years.",
+      "A tailor sews three coats for three siblings: one for warmth, one for invisibility, and one for recognition by everyone who has forgotten you. Write the story of the third coat.",
+      "The dragon guarding the tower is not a captor — it is the last defense against something far worse. The hero arriving to slay it has no idea.",
+      "Every mirror in the kingdom shows not your reflection but the truest version of yourself. Most people have stopped looking.",
+      "A miller's fourth child has no extraordinary gift and no magical helper. They nonetheless achieve something the stories never account for.",
+      "A forest grants one wish to any traveler who reaches its center. Half the pilgrims turn back when they realize they don't know what they want.",
+      "An enchanted clock has been stopped at midnight for a hundred years. No one remembers why. Everyone has simply built their lives around it.",
+      "A kingdom where the royal family can only speak truth finds the youngest child born capable of a single, carefully worded lie. Everyone is afraid of what this means.",
+      "A traveling merchant sells something different to every customer — not goods, but exactly what each person was one moment away from doing without.",
+      "The chosen hero has already failed. Write the story of the completely ordinary person who now has to fix everything without any prophecy guiding them.",
+      "A cursed prince has been waiting in his tower for so long that he no longer remembers what he is waiting for — and has begun to wonder if he wants to be found."
+    ],
+    "Dystopian": [
+      "In a society that has outlawed personal memory in favor of approved collective records, a woman keeps a private journal — not as resistance, but out of loneliness.",
+      "The city assigns every resident a daily happiness score. Yours has been exactly average for three years, until today, when it drops for no reason anyone can identify.",
+      "A librarian in a world where all fiction has been reclassified as misinformation hides a single novel behind the wall. She has never read it. She keeps it for someone after her.",
+      "An archivist is assigned to delete all records of a town that officially no longer exists. One file is corrupted and refuses to erase.",
+      "In a future where protest is legal but memory of it is removed within twenty-four hours, an organizer wakes on the morning after the largest march in history with no recollection of it.",
+      "A government job placement system assigns everyone their career at age sixteen based on optimization data. The protagonist has been assigned to something they are perfect for and do not want.",
+      "The last unmonitored room in the city is inside a decommissioned subway station. People come there just to be unobserved for twenty minutes. Tonight something is different.",
+      "A compliance officer enforcing a speech regulation begins to realize it is designed not to control what people say, but what they think to say.",
+      "In a world where aging has been made optional, a woman who chose to age is the oldest person in the city. She has things to say about time that no one else can hear.",
+      "A mandatory empathy implant has eliminated violent crime entirely. A psychologist is the first person in a decade to report feeling something the implant cannot categorize.",
+      "Every citizen is required to submit a weekly summary of their thoughts. One man has been submitting the same summary for eleven years. No one has noticed.",
+      "Two people meet at the border of a restricted zone. Neither is supposed to be there. Both have the same reason for crossing."
+    ],
+    "Humor": [
+      "A wizard takes a corporate job at a mid-sized insurance firm. The orientation goes about as well as you would expect.",
+      "A ghost haunting a family home realizes the family is deeply boring and begins to wonder whether it is allowed to request a transfer.",
+      "A dragon retires from terrorizing the countryside and opens a bakery. The reviews are complicated by the fire hazard.",
+      "An alien anthropologist studying human behavior is deeply confused by approximately everything but is particularly troubled by queues.",
+      "A time traveler arrives in the present from the far future expecting to be amazed and is instead profoundly disappointed by almost everything.",
+      "The devil arrives to collect a soul and finds the paperwork is wrong. The soul in question is very much alive, extremely annoyed, and has questions.",
+      "A necromancer accidentally raises the dead at a family reunion. The living relatives handle this remarkably calmly. The dead are the problem.",
+      "A superhero with genuinely useful but deeply unimpressive powers tries to find a niche in a world already full of flashier options.",
+      "A talking cat is given the opportunity to speak and uses it exclusively to lodge formal complaints.",
+      "A professional villain discovers they have been accidentally enrolled in a hero loyalty program and keep accumulating points.",
+      "Death has been given a performance review. The feedback is detailed, thorough, and almost entirely about communication style.",
+      "A sentient office building develops opinions about its tenants. It starts leaving notes."
+    ],
+    "Magical Realism": [
+      "In a small coastal town, fish that have been caught and returned begin speaking to the fisherman who released them. They have very little interesting to say but they are persistent.",
+      "A woman's grief for her mother begins to fill their shared house with water — not flood-level, just enough to require rubber boots and careful navigation.",
+      "Every lie told in a particular village remains visible in the air for exactly one hour. The local consequences are mostly administrative rather than moral.",
+      "A photographer discovers that her camera captures not what is there, but what the subject most deeply believes to be true. Portrait commissions have become complicated.",
+      "In a city where the dead continue their routines for one year before passing on, traffic has grown noticeably worse.",
+      "A man's lost years — the ones he spent working rather than living — return one afternoon in the form of a briefcase left on his doorstep. Inside: everything he missed.",
+      "On the day a small town's last original resident dies, the town begins forgetting itself — street names, the location of the well, the reason the fountain was built.",
+      "The rain in this story is not symbolic. It is, however, specifically targeted. The characters have begun to notice.",
+      "A librarian discovers that certain books, checked out by the right people at the right moment, will not come back until they have been fully understood.",
+      "A woman who was raised without music hears a song for the first time at forty. She doesn't understand why everyone around her can continue functioning normally after this.",
+      "A mapmaker's most recently drawn streets begin appearing in the city the morning after he finishes them. He has not yet learned to be careful what he maps.",
+      "The bees in this valley have always known something. This year, for the first time, they begin to act on it."
+    ],
+    "Memoir": [
+      "Write about a place you returned to after a long absence and found different in ways you cannot precisely describe.",
+      "A single conversation with a parent or elder that you understood differently years later than you did when it happened.",
+      "Write about a skill you learned from someone who is now gone — the way they showed you, what you still hear when you use it.",
+      "Describe the house or apartment where you became an adult. Give it more credit than it deserves.",
+      "A decision you made for reasons that made sense then and make no sense now.",
+      "Write about someone who briefly occupied your life and then vanished completely — not dramatically, just gradually and then entirely.",
+      "A moment you thought would be forgettable that you have never actually forgotten.",
+      "Write about an object that outlasted the relationship it came from.",
+      "Describe what your daily routine looked like at the happiest you have been, and at the worst. Do not explain either.",
+      "The apology you never gave, or the one you gave wrong.",
+      "Write about a version of yourself from ten years ago. Try to be fair to them.",
+      "A thing you believed completely, then stopped believing, and cannot remember the exact moment you changed."
     ]
   },
   "art": {
@@ -134,6 +263,26 @@
         "A traveler rests on a mountain trail midway — the path continues both behind and ahead, equally unresolved.",
         "A figure stands at a harbor with boats softly sketched in the background. Express waiting entirely through posture.",
         "A solitary herder with animals on a flat plain at dusk — figure, animals, horizon, and last light."
+      ],
+      "Animals": [
+        "Sketch a sleeping animal from direct observation. Focus entirely on the weight and surrender of its posture, not anatomical accuracy.",
+        "Draw a bird in three stages of a single movement: before, during, and after. Use the same loose gesture lines for all three.",
+        "Sketch an insect in extreme close-up. Choose one detail — a wing, a leg joint, a compound eye — and give it the full page.",
+        "Draw a working animal performing its function. Let the purpose show in every line.",
+        "Sketch the tracks and traces an animal left behind rather than the animal itself.",
+        "Draw two animals of vastly different scale sharing the same small frame. Let the size relationship be the entire composition.",
+        "Sketch an animal mid-leap or mid-flight. Sacrifice all detail in service of the single impression of movement.",
+        "Draw an animal's face using only the minimum number of lines required for recognition. Then try to reduce it further."
+      ],
+      "Abstract": [
+        "Make twenty small gestural marks in twenty seconds each. Choose three that feel most alive and develop each into a larger composition.",
+        "Draw a full-page composition using only circles and straight lines. Find everything you need within those two constraints.",
+        "Sketch your emotional state right now using only abstract line — no representational content permitted.",
+        "Create a composition based entirely on rhythmic repetition of a single mark. Let variation happen naturally, without forcing it.",
+        "Draw a response to a piece of music you are listening to right now. Match the tempo of the music with the tempo of your mark-making.",
+        "Make a large gestural composition using your non-dominant hand exclusively.",
+        "Fill the page with density and then find the composition by erasing — create through removal rather than addition.",
+        "Create an abstract composition that has a clear visual center of gravity without depicting any object. Balance is your only subject."
       ]
     },
     "Watercolor": {
@@ -166,6 +315,26 @@
         "Two people on a clifftop: the intimate, human-scale detail of their presence set against an epic horizontal sweep of sea and open sky.",
         "A gardener at work in their plot — let the figure and landscape share exactly the same palette so they seem to grow from each other.",
         "A market stall at early morning: seller, produce, and pale early light all painted with equal care and equal looseness."
+      ],
+      "Animals": [
+        "Paint a bird's plumage using wet-on-wet technique. Let color bleed and bloom the way feathers catch light — beyond your control.",
+        "Create a loose study of a fish underwater, letting the water and the creature share the same dissolving color palette.",
+        "Paint an animal portrait using only warm tones — no cool colors — and see what that restriction does to the sense of life in the creature.",
+        "Capture an animal in a single gestural wash. One shape, one color, one clear impression — completed before the wash dries.",
+        "Paint a scene of animals at water — drinking, wading, reflected — and give the reflection equal attention to what it mirrors.",
+        "Create three small studies of the same animal in three different lights: early morning, high noon, and dusk.",
+        "Paint an insect on a plant or flower. Give both subject and support equal color attention and equal care.",
+        "Paint an animal you have seen recently, from memory rather than reference. Let the inaccuracies tell their own story."
+      ],
+      "Abstract": [
+        "Lay down large, wet washes of color without any plan. When the surface is nearly dry, begin responding to the shapes that have already formed.",
+        "Create an abstract composition based entirely on the tension between one warm and one cool color mixed at different ratios across the page.",
+        "Pour or drop paint onto wet paper and tilt the surface to direct the flow. Your job is to decide when to stop, not where the paint goes.",
+        "Create a composition using only the residue of dried washes — the tidelines, the blooms, the granulation. The accidents are the painting.",
+        "Paint a series of overlapping transparent layers, each slightly different in hue, and observe what happens to color where they intersect.",
+        "Create an abstract response to a single remembered emotion — not an illustration of it, but a direct translation into color and mark.",
+        "Work wet-on-wet across a very large surface with no sketch and no plan. The painting is a conversation, not a statement.",
+        "Create a controlled abstract in which every mark was deliberately placed — the opposite of accident. Control is the subject."
       ]
     },
     "Digital": {
@@ -198,6 +367,26 @@
         "Design an editorial illustration about the relationship between human beings and the technology that now mediates most of their experience.",
         "Illustrate a myth or legend from a culture other than your own. Spend time researching the story and its visual traditions before you begin.",
         "Create a double-exposure composition: one figure and one landscape that, overlaid, tell a single coherent story."
+      ],
+      "Animals": [
+        "Design a creature that could plausibly exist — an evolutionary adaptation to a specific real environment no existing species has fully exploited.",
+        "Create a character design for an anthropomorphized animal that maintains its animal nature completely even while being humanized in dress or posture.",
+        "Illustrate an animal portrait in a flat, graphic style — no gradients, limited palette, strong silhouette. Let the design breathe.",
+        "Create a scientific illustration of an imaginary species: a classification plate with multiple views, a scale indicator, and detailed feature callouts.",
+        "Design a pattern or repeat based entirely on a single animal type — abstracted to whatever degree the design requires.",
+        "Illustrate an animal in its habitat at a moment of behavioral interest — hunting, displaying, nesting, or resting.",
+        "Create a series of three spot illustrations of the same animal at three different life stages.",
+        "Design an animal as it might be rendered in the visual language of a specific cultural tradition — Japanese woodblock, Mughal miniature, or medieval bestiary."
+      ],
+      "Abstract": [
+        "Create a generative-feeling composition: design a simple rule for placing marks and follow it rigidly until the image is complete.",
+        "Design a composition using only two colors — one hue and one neutral — and explore how far you can push contrast and variety within those constraints.",
+        "Create an abstract composition where the focal point is achieved entirely through contrast of scale, not color or value.",
+        "Design a pattern that reads as both random and structured depending on how closely you look at it.",
+        "Create an abstract work inspired by a specific sound. Translate frequency, texture, and duration into visual equivalents.",
+        "Design a composition using only geometric primitives that nonetheless evokes a clear emotional response through proportion and placement.",
+        "Create an abstract work in which the negative space carries as much visual weight as the positive forms.",
+        "Design a series of four abstract compositions that form a sequence — a visual sentence with a beginning, middle, complication, and resolution."
       ]
     },
     "Oil": {
@@ -230,6 +419,26 @@
         "Create an allegory: a figure in a landscape where figure and setting together represent an abstract concept — grief, hope, time, or change.",
         "Paint a large, populated outdoor scene — a market, a festival, a demonstration — where people are woven inseparably into a specific, recognizable place.",
         "Create a large landscape with a single small figure positioned anywhere in the composition. Consider carefully how that placement changes everything."
+      ],
+      "Animals": [
+        "Paint an animal portrait with the same psychological weight and compositional intention you would bring to a human portrait.",
+        "Create a large-scale predator-prey scene. Resist both sentimentality and sensationalism — paint what actually is.",
+        "Paint a domestic animal in the precise quality of indoor light: the specific warmth of lamp light or the cold northern light through a window.",
+        "Study a single bird and paint it with the level of scientific attention of Audubon. Accuracy is the art.",
+        "Paint an animal at the edge of a habitat boundary — the shoreline, the forest edge, the place where one world gives way to another.",
+        "Create an oil study of an animal's texture — feather, scale, fur, or hide — filling the canvas with pure surface and light.",
+        "Paint a nocturnal animal in low, cool light. Let the dark dominate and let your subject emerge reluctantly from it.",
+        "Create an animal painting in the tradition of Dutch Golden Age still life — a dead game bird, a caught fish — with the same reverence and technical ambition."
+      ],
+      "Abstract": [
+        "Create a large abstract composition using only a palette knife — no brushes. Let texture, direction, and accumulation of paint be your entire vocabulary.",
+        "Work on a very dark ground. Build your composition from light into dark, reversing the typical painting sequence.",
+        "Create an abstract composition responding to a specific place — not depicting it, but carrying its quality of light, space, and atmosphere.",
+        "Make a painting using only primary colors and their direct mixtures. No pre-mixed colors from a tube.",
+        "Create an abstract work where every mark is committed and irreversible — no overpainting, no corrections. First marks are final.",
+        "Build a composition through layering: underpainting first, then opaque mid-tones, then transparent glazes. Let all three layers remain visible.",
+        "Create an oil painting that is almost entirely one color. Find everything you need in value, temperature, and texture.",
+        "Paint in a format radically different from what you usually choose — very tall, very wide, very small. Let the format generate the composition."
       ]
     },
     "Acrylic": {
@@ -262,6 +471,26 @@
         "Create a painting that begins with precise representation at its center and becomes increasingly abstract toward every edge.",
         "Paint a transit waiting space — a bus stop, train platform, or ferry queue — focusing on ordinary people in ordinary in-between time.",
         "Create a bright, graphic illustration of a folk tale or childhood story using the full chromatic range of your palette."
+      ],
+      "Animals": [
+        "Paint an animal using the bold, graphic language of a linocut or woodblock print — strong outlines, flat color shapes, high contrast.",
+        "Create a brightly colored animal portrait that deliberately departs from the creature's natural coloring. What does invented color do to your reading of the animal?",
+        "Paint an animal in a pop art style: flat fills, strong outline, limited palette, graphic impact.",
+        "Create a patterned background and paint an animal against it. Let the pattern either camouflage or dramatically reveal the creature.",
+        "Paint a swarm, flock, or school — many identical animals in motion — focusing on the collective shape rather than any individual creature.",
+        "Create an animal painting in pure acrylic impasto — palette knife only, heavy texture, no brushes. Surface becomes the subject.",
+        "Paint an animal in an unexpected, incongruous setting — a wild creature in an urban space, a domestic animal in wild nature.",
+        "Create a diptych: the same animal in its native habitat and in an entirely different, invented one."
+      ],
+      "Abstract": [
+        "Create an abstract painting using only masking tape to generate hard-edged geometric compositions. Remove and reveal as you build.",
+        "Paint with a palette of only colors you mixed yourself — no colors used directly from the tube.",
+        "Create a large abstract in which the primary visual interest comes from surface texture rather than color or composition.",
+        "Build a composition using poured paint. Tilt, direct, and stop the flow rather than painting in the conventional sense.",
+        "Create an abstract triptych in which each panel is visually complete alone but the three together say something none can say individually.",
+        "Paint an abstract response to a memory — not an illustration of it, but a translation into color, mark, and surface.",
+        "Create a painting that is in conversation with a specific abstract work by another artist — not a copy, but a response.",
+        "Build an abstract painting from the inside out — start with the center point of visual interest and work outward to the edges."
       ]
     },
     "Ink": {
@@ -294,6 +523,26 @@
         "Illustrate the feeling of a specific piece of music or a specific poem: one figure in one landscape that captures the emotional register of the words or sounds.",
         "Create a wide panoramic landscape with figures rendered as pure silhouette in the foreground, ink wash handling the entire sky.",
         "Draw a market, bazaar, or street food scene: dense cross-hatching for the shadows under awnings, ink wash for the open-air atmosphere."
+      ],
+      "Animals": [
+        "Draw an animal portrait using only cross-hatching. Every form and every shadow built entirely from crossed lines — no outline anywhere.",
+        "Create a single continuous line drawing of an animal in motion. The pen never leaves the page.",
+        "Illustrate a bird in the style of a naturalist field journal — crisp, observational, with annotated details and behavioral notes.",
+        "Draw an animal using ink wash only, no line work. Build form and surface from dilution and pooling of ink alone.",
+        "Create a close-up insect study using dense stippling for every shadow and every surface transition.",
+        "Draw an underwater animal using flowing, calligraphic brushstrokes. Let the quality of the mark suggest both creature and element.",
+        "Illustrate an animal hunt or chase in a single sequential composition — the full arc of the story in one contained ink drawing.",
+        "Create a bold, graphic animal print in the tradition of Japanese woodblock: strong silhouette, flat planes, decisive mark-making."
+      ],
+      "Abstract": [
+        "Create an abstract composition using only ink wash — different dilutions, different pooling strategies, no line work.",
+        "Dip an unconventional tool into ink and make a full composition using only what that tool can produce.",
+        "Create a composition that is entirely made from the controlled bleed of ink into wet paper.",
+        "Build an abstract composition using only geometric marks — squares, lines, circles — with no organic shapes allowed anywhere.",
+        "Create a large gestural abstract using a wide brush and very diluted ink. Speed is required. Deliberation is not.",
+        "Make a composition where the white of the paper is the primary visual element. The ink defines only what is not white.",
+        "Create an abstract composition by overprinting — make a mark, let it dry, make another mark over it, repeat until the composition resolves.",
+        "Build an abstract ink composition inspired by a specific landscape — its textures, rhythms, and spatial qualities — without depicting it."
       ]
     },
     "Pixel Art": {
@@ -326,6 +575,26 @@
         "Design a small overworld map icon: a distinct figure standing in or before a distinct environment type.",
         "Create a pixel animation key frame — a figure in a landscape at a single moment of high dramatic tension.",
         "Design an NPC character and their home environment as a single cohesive visual package — the space and the person should feel inseparable."
+      ],
+      "Animals": [
+        "Create an animated pixel creature — design a four-frame idle animation that communicates the animal's personality without moving the whole body.",
+        "Design a fantasy creature for a game bestiary entry: top-down overworld sprite and front-facing battle sprite.",
+        "Create a pixel art nature scene populated by animals, where each creature's scale and placement feels ecologically plausible.",
+        "Design a series of six animal icons at 16x16 pixels — test the limits of recognition at extreme small scale.",
+        "Create a pixel art pet companion character with three emotional states: happy, anxious, and sleepy.",
+        "Design a dangerous creature for a game — its threat level should be legible in the silhouette alone without any additional context.",
+        "Create a detailed pixel art study of a single species: multiple views, color variants, and one behavioral pose.",
+        "Design an impossible hybrid creature — two species combined — and make the combination feel visually and conceptually coherent."
+      ],
+      "Abstract": [
+        "Create an abstract pixel composition using only a 4-color palette. Let pattern and proportion do all the work.",
+        "Design a seamlessly tiling abstract pattern at 16x16 pixels that reads as both geometric and organic simultaneously.",
+        "Create a pixel animation of a pure abstract transition — one color field becoming another through a designed sequence of intermediate states.",
+        "Build an abstract pixel composition based entirely on the visual properties of dithering — the pattern itself becomes the image.",
+        "Design a pixel gradient that cycles through a full emotional arc — from one mood-color at the left edge to a completely different one at the right.",
+        "Create a large abstract pixel composition where the pixel grid itself is visible as part of the design intention.",
+        "Design an abstract pixel background for a game: seamlessly tiling, visually interesting at a distance, non-distracting in use.",
+        "Create a pixel composition inspired by circuit board topology — traces, nodes, and pathways — as pure abstract composition."
       ]
     },
     "Mixed Media": {
@@ -358,6 +627,390 @@
         "Create a mythological or folkloric scene using mixed media. Choose materials that comment on or deepen the meaning of the story being depicted.",
         "Combine embroidery or hand-stitching with paint or ink. Let thread become line, let fabric become ground, let stitch become mark.",
         "Create an image with a hidden layer — something concealed within or beneath the visible materials that only close physical examination will reveal."
+      ],
+      "Animals": [
+        "Create an animal portrait incorporating actual natural materials — feathers, pressed leaves, sand — fixed to the surface permanently.",
+        "Build an insect collage using torn paper, transparent overlays, and fine ink detailing. Layer transparency to suggest the creature's delicacy.",
+        "Create an animal portrait combining a printed photographic base with hand-painted color and drawn detail added over it.",
+        "Build an underwater scene using layers of translucent medium, tissue paper, and ink — let the layering create the sense of depth and diffusion.",
+        "Create a bird study combining watercolor for the large color shapes and pen for the precise feather detail. Let the two media remain visibly distinct.",
+        "Build a wild animal portrait using torn magazine pages for the textured background and paint or ink for the creature itself.",
+        "Create an animal in a habitat built from actual maps of that habitat's real geography, combined with painted or drawn representation of the animal.",
+        "Make an animal portrait where the creature is drawn or painted and surrounded by handwritten field observations and quick gestural studies from real or imagined fieldwork."
+      ],
+      "Abstract": [
+        "Create an abstract composition using only materials that are themselves transparent or translucent — tracing paper, tissue, acetate, glass, water.",
+        "Build an abstract collage using only printed text as material. Cut, tear, overlap, and layer until the words dissolve into pure visual form.",
+        "Create an abstract work that begins as a drawing, becomes a painting, and ends as a collage — all three stages must remain visible.",
+        "Make an abstract composition from a single material used multiple different ways — paper folded, torn, painted, printed on, and stitched.",
+        "Create a textured abstract using wax resist, ink wash, and salt. Prepare the surface, apply the resist, pour the ink, add the salt. Then wait.",
+        "Build an abstract composition using exclusively found materials from today's environment — receipts, wrappers, torn corners, fabric scraps.",
+        "Create an abstract work where stitching or thread is the primary linear element, combined with a painted or dyed ground.",
+        "Make an abstract piece in two clearly distinct materials where the contrast between them is the visual and conceptual subject."
+      ]
+    },
+    "Charcoal": {
+      "People": [
+        "Build a portrait using only broad side-of-stick marks — establish form through value mass rather than contour. Let the smudge be a tool, not an accident.",
+        "Draw a figure seated by a window. Restrict yourself to three distinct values: white paper, mid-grey, and deep black. No blending between them.",
+        "Capture a face using exclusively erasing as your drawing method. Begin with full charcoal coverage and pull the light forward.",
+        "Build a portrait from charcoal dust, your palm, and a single sharp tool. No deliberate outlines — construct entirely through value.",
+        "Sketch a standing figure in a single continuous gesture using a large stick and full arm movement. No wrist drawing, no lifting.",
+        "Draw a figure mid-gesture with arms extended. Prioritize movement over accuracy. Commit to every mark.",
+        "A face emerging from or receding into complete darkness. Give the shadow equal compositional weight to the features themselves.",
+        "A crowd reduced to value masses — no individuals, just the collective weight of people together in light and dark."
+      ],
+      "Landscapes": [
+        "Cover the full page in charcoal, then use an eraser to pull the landscape from the darkness. Light exists only where you remove material.",
+        "Draw the silhouette of a tree line at dusk using only broad marks. Let the edge of the charcoal mass carry the entire mood.",
+        "A winter landscape in pure black, white, and three greys. Use value contrast alone to define space without any other tool.",
+        "Draw rolling farmland using only horizontal marks of varying weight. Let the density of marks create the distinction between near and far.",
+        "A stormy sky taking up three-quarters of the page. Give the land only what the sky cannot contain.",
+        "Draw a rocky cliff face using only marks that follow the direction of the geological formation. Let structural logic drive every mark.",
+        "A city at night using smudge and fog to soften edges between buildings and sky. Hard edges only for the closest foreground plane.",
+        "Draw an empty road disappearing into a dense forest. Use stark contrast — pale light on the road, deep shadow under the trees."
+      ],
+      "Both": [
+        "A figure standing in bright snow. Use the extreme value contrast of charcoal and white paper without mid-tones. Make the cold visible.",
+        "A crowd under a streetlight at night. Use the light to create the focal point and let everyone at the edges dissolve into near-black.",
+        "Draw a figure walking into a landscape using the same grey value for both. Only their edge against each other defines the separation.",
+        "A solitary figure on a wide, flat beach at low tide. Allocate the ground so the person is small and the space enormous.",
+        "Two people by a fire in an open field at night. Use the fire as the only light source; let it actively fight the surrounding darkness.",
+        "A woman hanging laundry on a rooftop above a city. Make the domestic detail precise and let the city below fall into impression.",
+        "A fisherman on a dock at first light. Let the tonal mass of fog unify the figure and the water.",
+        "A lone figure in a winter wood surrounded by bare trees. Use the vertical rhythm of the trunks to create depth and enclosure."
+      ],
+      "Animals": [
+        "Sketch a large animal in motion using no more than five marks. Make each mark count for form, weight, and direction.",
+        "Draw a sleeping dog in full charcoal, focusing entirely on the warmth and weight of its resting body — muscle and fur, not outline.",
+        "Use only the smudge tool to build a portrait of a cat's face. No hard marks. Every edge arrived at through gradual transition.",
+        "A bird of prey mid-flight — stretch the wingspan edge to edge. Work fast and commit to the gesture.",
+        "Draw a herd of animals in a landscape so that individual creatures read as shapes within a larger collective mass.",
+        "An animal at close range looking directly out of the picture plane. Use the intensity of charcoal black to create depth in the eyes.",
+        "A horse in profile using only five values: coat, mane, shadow, highlight, and background — each a distinct flat plane.",
+        "Sketch an insect in extreme close-up. Use a sharp charcoal point for precise carapace detail and broader marks for the surrounding dark."
+      ],
+      "Abstract": [
+        "Fill the page with charcoal completely. Work back with erasers of three different hardnesses to find a composition that was already there.",
+        "Make ten marks in ten different ways using the same piece of charcoal — edge, tip, flat, smudge, scratch. See what conversation emerges.",
+        "Build a composition from nothing but value gradients. No edges. No forms. Just the movement from dark to light and back again.",
+        "Create a rhythm across the page using a single repeated mark in three values. Let the repetition become the subject.",
+        "Draw an emotional state using exclusively charcoal marks. Resist any figurative interpretation. Work until it feels accurate.",
+        "A composition based entirely on the contrast between something precise and something dissolved. Define neither. Let the relationship speak.",
+        "Make marks that move in all directions from a single point of maximum darkness. Let the energy radiate and slow at the edges.",
+        "Create a large composition using only two tools: a wide charcoal block and a kneaded eraser. Mark and removal are your only methods."
+      ]
+    },
+    "Gouache": {
+      "People": [
+        "Paint a portrait using completely flat color shapes — no gradients, no blending, no transitions. Use edge and shape alone to convey form.",
+        "Capture a figure in interior light using a muted palette of five colors maximum. Resist the impulse to render.",
+        "A face using three values per color: shadow tone, mid tone, and light. Lay each shape cleanly and do not soften the edges.",
+        "Build a figure using only opaque, flat strokes placed side by side. Think in shapes, not lines.",
+        "Paint a portrait that begins with the background color and builds the figure entirely in front of it using opaque layers.",
+        "A figure in outdoor light — use the opacity of gouache to correct and refine. Show the reworking; do not hide it.",
+        "Two figures in silhouette against a bright ground. Give the silhouettes complex, accurate shapes but fill them with flat color.",
+        "Paint someone reading using only the shapes of shadow and highlight. The lit and unlit planes should tell the whole story."
+      ],
+      "Landscapes": [
+        "A flat, graphic rendering of a cityscape using only five colors. Use shape and value contrast to create depth without tonal blending.",
+        "Paint a landscape at a specific hour of the day using the exact quality of light as your primary compositional challenge.",
+        "A botanical close-up — a single leaf, branch, or flower in flat gouache shapes. Work from direct observation.",
+        "Paint the same landscape in two different color moods: warm and cool. Work fast. Both versions on the same page.",
+        "A graphic rendering of a body of water using flat horizontal stripes of color in carefully graduated values.",
+        "A mountain seen from distance rendered as flat shapes of color. No gradients in the sky; no blending in the mountain.",
+        "Paint a garden using opaque color blocking. Give equal visual weight to the empty spaces between plants.",
+        "A coastal scene using no more than four colors. Use value within those four to supply the full range you need."
+      ],
+      "Both": [
+        "A figure in a graphic landscape. Build the scene in planes — foreground, middle, background — treating each separately.",
+        "Paint a market scene using flat simplified shapes. The people become repeating color forms against the architecture.",
+        "A boat at anchor in a harbor. Make the water flat stripes; make the boat and its reflection precise graphic shapes.",
+        "Two children in a summer garden — make the color choices warm, high-key, and fully opaque.",
+        "A street scene at dusk — give the lamplight a specific color temperature and let everything around it respond accordingly.",
+        "A figure at an open window. Use the window to create a strong compositional division between interior and exterior light.",
+        "Farmland with a single worker in the distance. Use scale and color saturation to establish near and far.",
+        "A person on a park bench in autumn. Match the person and the foliage in color temperature so they belong to the same world."
+      ],
+      "Animals": [
+        "Paint a bird using flat, clean gouache shapes. Reference the approach of Japanese woodblock artists toward simplified form.",
+        "A dog portrait using opaque, flat color areas arranged to describe the face. Use edge quality, not blending, to distinguish fur from background.",
+        "An insect or small creature in extreme close-up, painted flat and precise. Treat it as a graphic design problem.",
+        "A fish underwater using flat planes of color for water, light, and scale pattern.",
+        "Two birds on a wire. Simple, balanced, graphic. Give the negative space as much consideration as the birds.",
+        "Paint a wild animal using bold, simplified color blocking. Reduce the form to the minimum number of shapes required.",
+        "A cat stretched in a sunny patch — use the flat graphic shadow shape as much as the lit form itself.",
+        "An animal at rest seen from above — use the unusual angle to flatten the form and simplify it further."
+      ],
+      "Abstract": [
+        "Using only six pre-mixed colors, build a composition by layering opaque shapes — each one reacting to the shape before it.",
+        "Create a composition that works like graphic design — flat shapes, bold contrast, precise edges throughout.",
+        "Mix a limited palette of three colors plus white. See how far the palette extends when pushed with careful layering.",
+        "Build a composition by beginning with a dark background tone and working from dark to light using opaque marks.",
+        "A purely geometric composition — only rectangles and circles — but with a clear emotional or atmospheric intent.",
+        "Mix a palette of low-saturation, complex tones and build a full composition using only those tones.",
+        "Explore what happens when you leave the underpainting visible in some areas and fully cover it in others.",
+        "Create a composition based on a specific piece of architecture, rendered entirely through shape, color, and arrangement — no rendering."
+      ]
+    },
+    "Pastel": {
+      "People": [
+        "Build a portrait using only soft pastel dust applied with a finger. No marks — only smearing and layering of color.",
+        "A figure in strong sidelight — use warm pastels in the light and cool in the shadow. Let the contrast carry the form.",
+        "Capture a person dancing using bold gestural pastel strokes that blur and overlap. Accept the imprecision as intention.",
+        "A seated figure using the texture of the paper as a deliberate element — let the tooth show through in lighter passages.",
+        "Build a face using only the side of the pastel stick. No sharp marks, only broad color forms.",
+        "Two people sharing a moment. Use warm, close colors for both to make them feel connected through the palette alone.",
+        "A child's face — use the softest, most atmospheric approach you can. Layered, gentle, slightly out of focus.",
+        "A portrait that begins with a coloured ground — build the face by adding and subtracting from a middle value base."
+      ],
+      "Landscapes": [
+        "A sunset sky using layered pastels blended with your fingers. Work quickly, from light to dark, before the colors muddy.",
+        "A misty morning landscape built from tonal gradients of smeared horizontal strokes — soft, directionless, atmospheric.",
+        "A field of flowers in full bloom — use saturated pastel color and let the paper texture contribute the feeling of light on petals.",
+        "A coastal scene at dawn. Use cool blues and warm golds directly against each other with minimal blending.",
+        "A snow-covered landscape using only pale lavender, grey-blue, and yellow-pink marks against white paper.",
+        "A forest interior — use layering to suggest dappled light without rendering any individual leaf or branch.",
+        "A dramatic sky above flat marshland. Give three-quarters of the composition to the sky and make every inch of it work.",
+        "A mountain at golden hour. Let the layering of warm over cool tones create the specific quality of alpine light."
+      ],
+      "Both": [
+        "A figure in a wildflower meadow — let the pastel color blur the boundary between person and landscape.",
+        "A person by a large window with a landscape behind them — use warm interior versus cool exterior to separate the two spaces.",
+        "Two people on a hillside with a wide landscape below — use aerial perspective, cool and pale in the distance, warm and saturated near.",
+        "A silhouette of a figure at the edge of a cliff at sunset. Make the sky the real subject and the figure a note in it.",
+        "A child running through autumn leaves. Match the warm earth tones of the leaves to the warmth of the figure.",
+        "A figure standing in fog. Use the softest available pastel and the lightest possible touch throughout.",
+        "A market scene rendered in impressionistic pastel strokes — movement, color, and light over precise observation.",
+        "A person sitting at the edge of water with reflections. Let the landscape double and soften beneath the still surface."
+      ],
+      "Animals": [
+        "Draw a sleeping cat using soft, warm pastels that blur into the surface beneath them.",
+        "A horse in a field — use the broad strokes of the pastel stick to suggest the sweep of the animal's body.",
+        "A close-up of feathers — use layered color and directional marks to suggest texture without rendering each quill.",
+        "A dog's face using warm, heavy pastel marks in the light and cool thin marks in the shadow.",
+        "An animal in motion — let the blurring and smearing of pastel become the suggestion of speed itself.",
+        "Two birds on a branch — use the negative space of the paper against saturated marks to create the impression of surrounding light.",
+        "A large animal filling the composition. Use the scale of the subject to push the pastel into bold, broad territory.",
+        "A fish underwater — use cool blues and greens blended together with occasional bright marks for scale and light."
+      ],
+      "Abstract": [
+        "Apply five bold pastel colors in large horizontal bands. Then smudge each into the next until the bands become a gradient landscape.",
+        "Begin with a fully saturated pastel ground. Work into it by adding lighter marks and see what composition emerges from the color.",
+        "Create a composition from purely gestural marks — fast, expressive, directional. Accept whatever the pastel decides.",
+        "Use complementary colors in direct contact. Blend them at the edges; leave them raw and hard at the center.",
+        "Build a composition entirely through subtraction — begin with a fully covered page and reveal the composition through erasure.",
+        "Make a composition that is about atmospheric depth: near dark, far light, everything in between graduated.",
+        "Apply color in layers — each layer a slightly different temperature. Blend selectively. Let the underlayers breathe through.",
+        "Use only the full stick of pastel, laid flat, to make all marks. See how much variation this single position offers."
+      ]
+    },
+    "Colored Pencil": {
+      "People": [
+        "A portrait built up through careful cross-hatching in four or five layered colors. Work slowly; the medium rewards patience.",
+        "Draw a figure in bright outdoor light using burnishing to achieve richness in the highlighted areas.",
+        "A close-up of a face focused on the texture and color variation of skin — not tone alone, but the underlying warmth and coolness.",
+        "A child asleep — work with the lightest possible touch and let the delicacy of the medium carry the tenderness.",
+        "A face in profile with sharp sidelight — use the white of the paper for full lights and build value slowly from there.",
+        "A full figure in interior light. Use cross-hatching at multiple angles to build optical color mixing in the shadow areas.",
+        "Draw hands in careful detail — focus on the complex texture and color shifts across knuckles, palms, and fingertips.",
+        "A portrait using layered wax bloom as a deliberate texture element. Let the surface quality become part of the image."
+      ],
+      "Landscapes": [
+        "Draw a dense forest scene using layered color. Build depth by shifting colors cooler and lighter as the space recedes.",
+        "A wildflower field from close range — give individual flower heads precise attention while the background softens into color.",
+        "A coastal scene focusing on the color variation in rocks and tidal pools — the oranges, greens, greys, and purples of wet stone.",
+        "A sunset sky using warm layers burnished to achieve a smooth gradient from the horizon up.",
+        "An urban street focusing on the warm and cool variations in pavement, buildings, and shadow under direct sun.",
+        "Draw bare winter trees with detailed bark texture using layered warm and cool browns built slowly.",
+        "A garden scene — prioritize the subtle color variation of foliage over the flowers. Find the six greens in one single bush.",
+        "A mountain meadow in spring. Use the precision of colored pencil to study individual wildflowers against the broad landscape."
+      ],
+      "Both": [
+        "A figure in a detailed landscape. Use the precision of the medium to give both the person and the setting equal, careful attention.",
+        "A person walking along a rainy city street. Capture the reflections on wet pavement with layered transparent glazing.",
+        "Two people at an outdoor café table. Give the tablecloth, the cups, the foliage, and the figures all the same level of specificity.",
+        "A fisherman in a small boat on still water — use the water reflections as an opportunity for layered color complexity.",
+        "A single figure reading in an autumn park. Match the warmth of the clothing to the surrounding warm tones of the leaves.",
+        "A market vendor surrounded by produce — use the saturated color of fruits and vegetables as the composition's engine.",
+        "A figure in a winter coat against a snowy urban background. Use cold light to push everything toward cool blue-grey.",
+        "A child in a garden — use the layering capacity of colored pencil to blend the warmth of the figure with the surrounding color."
+      ],
+      "Animals": [
+        "Draw a bird with full feather detail — use layered color and careful hatching to describe iridescence and texture.",
+        "A cat's face with close attention to color variation in fur — warm tabby tones, cool grey shadows, bright highlights.",
+        "An insect in extreme close-up, as precise as a natural history illustration plate. Use the full capacity of the pencil.",
+        "A horse in full sun — focus on the warm and cool color variations across its coat in bright, direct light.",
+        "A dog's eye in close detail — use layering to build the depth and wetness of reflection in a single eye.",
+        "A butterfly with full wing detail — use the geometric precision of the wing pattern as your compositional anchor.",
+        "Draw a sleeping animal focusing on the color complexity of the fur or feathers without resorting to any outline.",
+        "A wild animal in its natural setting — prioritize the color relationship between creature and habitat."
+      ],
+      "Abstract": [
+        "Layer complementary colors through cross-hatching until the optical mix creates a tone that is neither of the two source colors.",
+        "Create a composition using only the graduated pressure of a single pencil — from near-invisible to full saturation.",
+        "Build a color study using all warm pencils in one half of the composition and all cool pencils in the other. Find the border.",
+        "Explore burnishing: build up multiple layers to the point of wax bloom, then burnish back to a polished surface. Make this the subject.",
+        "Create a composition using only marks that move in one direction — diagonal, horizontal, or vertical. Switch only at transitions.",
+        "A composition that is entirely about surface: paper texture, wax bloom, soft marks, and hard marks together.",
+        "Layer every color available in your set in a single square inch. Study what happens to color when it fully saturates.",
+        "Work from a piece of music — translate its structure into a corresponding colored pencil composition."
+      ]
+    },
+    "Linocut": {
+      "People": [
+        "Design a single-color linocut portrait using only the contrast of cut and uncut surface. Think entirely in positive and negative.",
+        "A figure in strong graphic silhouette — simplified to the minimum information a single block can carry.",
+        "A face of a crowd reduced to its essential graphic elements. Design the cut so white lines and black masses work as one system.",
+        "A single figure in three-quarter view. Use only large, decisive marks — nothing tentative survives the printing.",
+        "Design a linocut of hands at work. It should read as a bold graphic at distance and as careful observation up close.",
+        "A figure in motion — simplify the gesture to the boldest possible cuts. Think about what to remove, not what to add.",
+        "A portrait focused on one distinguishing feature. Use the rest of the face sparingly.",
+        "Design a figure that works as pure shape — white lines cutting through a black form to suggest volume."
+      ],
+      "Landscapes": [
+        "Design a graphic landscape as a linocut. The sky, ground, and any elements should work as hard-edged shapes.",
+        "A seascape reduced to flat horizontal cuts — sky, horizon, sea, foam. Four zones, total.",
+        "A forest of bare trees designed for the block. Use the negative cuts to create light between the branches.",
+        "A rural landscape in black and white — bold sky, simple fields, clear horizon. Nothing more.",
+        "A mountain range designed as overlapping simplified silhouette shapes.",
+        "A city roofline at night — use bold black masses and white cut marks for lit windows.",
+        "A lone tree in a field under a large sky. Give three-quarters of the block to the sky and design it as carefully as the tree.",
+        "A coastal cliff face — use directional cuts to suggest rock texture without rendering it literally."
+      ],
+      "Both": [
+        "A figure working in a landscape designed as a single bold graphic block.",
+        "A boat in a harbor — design the composition so boat and water read as interlocking positive and negative shapes.",
+        "A person on a coastal path — use the rhythm of the path cutting through the landscape as the composition's spine.",
+        "A market scene reduced to strong graphic shapes — figures, stalls, shadow areas working together.",
+        "A figure under a large tree — use the canopy as a framing element for the smaller figure below.",
+        "Two figures in silhouette on a ridge. Design their shapes so they read clearly against the sky.",
+        "A child playing on a beach — use the scale difference of child and sea to make the emotional point.",
+        "A farmer in a field — use bold repeated cuts for the furrows and keep the figure simple and strong."
+      ],
+      "Animals": [
+        "Design a single animal in bold graphic reduction — the minimum marks needed for recognition and character.",
+        "A bird in flight as a linocut — simplify the wingspan to a clear graphic shape against an open sky.",
+        "A fish below a water surface — design the cut lines to suggest both the movement of the fish and the movement of water.",
+        "An animal portrait designed around a single strong gaze — use white cuts around the eye to create intensity.",
+        "A herd or flock reduced to repeating graphic shapes. Design the repetition as a composition.",
+        "A large animal seen from enough distance that its silhouette carries the whole story.",
+        "An insect or small creature designed as a precise graphic. Detailed cuts for the body; bold mass for the shadow.",
+        "A domestic animal in profile — find the five cuts that communicate it completely."
+      ],
+      "Abstract": [
+        "Cut a pure pattern with no representational content. Think about how the cut marks create rhythm and movement.",
+        "Make a composition based entirely on the contrast between tight, dense cutting and broad open masses.",
+        "Design a block using only diagonal cuts moving in one direction. Add a second layer of cuts at ninety degrees.",
+        "Explore the linocut as a texture study — create three distinct texture zones and arrange them as a composition.",
+        "Design a block where the uncut black areas are as important as the cut white marks.",
+        "Make cuts of three different widths and design a composition using only those three mark weights.",
+        "Create a composition based on a simple grid. Cut marks into the grid in a pattern that creates something larger than the unit.",
+        "Explore repeat pattern design — a single motif that tiles or rotates into a full composition."
+      ]
+    },
+    "Marker": {
+      "People": [
+        "Draw a portrait using only flat color shapes with a broad-tip marker. Resist the urge to blend. Let the shapes do the work.",
+        "A figure in strong direct light — use a black marker for the shadow shapes and leave the light areas as bare white paper.",
+        "A crowd scene using only a black fine-tip marker and a single grey alcohol marker. Design the tones carefully with those two tools.",
+        "A face in profile using only line — vary the weight and see how much form one changing line can hold.",
+        "A quick portrait using a large brush marker. Work fast. Resist the urge to correct. Finish in under three minutes.",
+        "A figure in motion drawn with a single continuous line and a broad marker for the shadow mass.",
+        "A head-and-shoulders portrait using a fine-liner for structure and a brush marker for shadow fill.",
+        "Draw someone mid-gesture using only gesture lines — no interior detail permitted."
+      ],
+      "Landscapes": [
+        "A city scene using only black line and flat grey fills. Design where the grey goes before you begin.",
+        "A landscape using a single broad marker in three different pressures to achieve three distinct values.",
+        "A tree-lined street using a fine-tip marker for architectural lines and a brush marker for foliage and shadows.",
+        "A seascape using only horizontal marker strokes — vary pressure and frequency to create both sky and sea.",
+        "A building facade in pure line with no tone or shadow. Make the lines carry all the architectural information.",
+        "A market or street scene using a palette of exactly three colored markers. Use each one purposefully.",
+        "Draw a park using only a fine black liner, leaving all light areas white. Work the darks and the voids.",
+        "An urban landscape at night — use dark markers and create the glow of streetlights through deliberate absence."
+      ],
+      "Both": [
+        "A figure in a cityscape — use the boldest, flattest version of the scene a marker can produce.",
+        "A person at an outdoor café table in bold color. Let the marker bleed slightly and use that quality.",
+        "A child in a park drawn quickly with a brush marker. Work in ten minutes maximum. Accept what arrives.",
+        "A street scene with a single dominant figure — use color contrast to separate the figure from the ground.",
+        "A figure walking away on a path — use the broad marker shadow on the ground as the composition's anchor.",
+        "Two figures in conversation — draw their gestures only, no interior detail.",
+        "A market vendor seen across a crowd — use the flat abstract shapes of distance to construct the scene.",
+        "A person at a bus stop in rain — use loose, fast marks for the rain and careful shapes for the figure."
+      ],
+      "Animals": [
+        "Draw a dog in bold flat color using a brush marker. Two colors plus paper white — nothing more.",
+        "A bird in simplified form — fine liner for the outline, broad marker for shadow and mass.",
+        "A cat drawn in a single continuous line. Close the loop at the end and see what you have.",
+        "An animal in motion using only gestural, overlapping marks.",
+        "A fish drawn using flat color blocks — scale pattern abstracted to pure graphic form.",
+        "A horse sketch in ten marks — broad, fast, committed. Do not correct.",
+        "An insect drawn with a fine liner in precise detail and shadowed with a broad marker loosely.",
+        "A wild animal at distance — use the flat markers to reduce it to a shape within its setting."
+      ],
+      "Abstract": [
+        "Make a composition using five markers of varying widths and only horizontal marks. Do not plan it.",
+        "Create a color field composition — fill areas with flat color, leaving some white. Let the arrangement be the subject.",
+        "Work with overlapping translucent marker layers to see how the colors stack and interact.",
+        "Draw the same mark twenty times in slightly different ways with the same marker. See what variation produces.",
+        "A composition made entirely from circles drawn in three sizes and three colors.",
+        "Use a wet marker on slightly damp paper. Work with what the bleed produces, not against it.",
+        "Create a composition by drawing through the sheet — lay the paper over a textured surface and mark heavily.",
+        "A composition using only the dry, dragging end of a nearly-exhausted marker."
+      ]
+    },
+    "Collage": {
+      "People": [
+        "Build a portrait from torn magazine paper — no scissors. Use only the chance edges of torn paper for all shapes.",
+        "A figure constructed entirely from the text pages of a single newspaper. Let the type become texture and tone.",
+        "A portrait made from cut paper in a deliberately limited palette — three colors plus black and white.",
+        "Build a face from shapes that are not faces — cut color fields, abstract shapes, pattern fragments. Let the eye assemble it.",
+        "A figure in a setting built from the packaging and ephemera of a single day — receipts, wrappers, labels, tickets.",
+        "A self-portrait assembled from images that represent who you are rather than what you look like.",
+        "A figure in silhouette cut from a single piece of patterned paper, placed against a contrasting ground.",
+        "A figure assembled from photographs of hands, feet, and body parts cut from different sources. Make the dislocation deliberate."
+      ],
+      "Landscapes": [
+        "A landscape built entirely from the color pages of magazines — use existing photography as abstract color material.",
+        "A cityscape using architectural photographs cut into geometric shapes and reassembled into something new.",
+        "A forest collage using green and brown paper torn into organic shapes and layered to suggest depth.",
+        "A sky assembled from blues, greys, and whites from different sources — create color harmony through careful curation.",
+        "A mountain landscape from cut paper in flat layers — the same approach as a woodblock print but in paper.",
+        "An urban scene built from cut maps, newspapers, and printed text. Let typography become part of the city.",
+        "An imaginary landscape assembled from elements that have never belonged together. Make it feel like a place.",
+        "A coastal scene using the actual color and texture of the source material to build sky, sea, and shore."
+      ],
+      "Both": [
+        "A figure in a collaged landscape — use different source materials for the person and the setting so they are distinct but harmonious.",
+        "A city scene assembled from layers of cut and torn paper with one photographic figure placed into it.",
+        "A person standing in a garden — use seed packets, catalog pages, and printed imagery for the setting.",
+        "A person in a natural landscape where the human and natural elements are built from the same visual material — make them merge.",
+        "A child on a beach — use the actual paper textures of sand, water, and sky to build a world that feels physical.",
+        "A person reading surrounded by pages of text that function as both environment and interior life simultaneously.",
+        "A figure at a market built from the packaging, labels, and printed materials of actual products.",
+        "A traveler in a foreign landscape — find images of each in different sources and negotiate a new coherence."
+      ],
+      "Animals": [
+        "Build an animal entirely from torn paper shapes — torn edges only, no scissors.",
+        "A bird collage using the colors and patterns of feathers sourced from natural history illustrations.",
+        "A fish assembled from blue and green color field fragments with pattern cut from different sources for the scales.",
+        "An animal portrait built from found photographs of unrelated subjects — source all your colors from reality.",
+        "A wild animal assembled from the landscape it lives in — use the same visual material for both creature and habitat.",
+        "An insect built from technical diagrams, natural history illustration, and abstract color field.",
+        "A series of small animal silhouettes, each filled with a different paper pattern.",
+        "A pet portrait built from objects and packaging associated with that animal — make the materials tell a story."
+      ],
+      "Abstract": [
+        "Create a grid of torn paper squares in twelve different textures. Arrange them as a pure composition.",
+        "Build a composition using only the white space between deliberately placed cut elements.",
+        "Use nothing but text — cut from books, newspapers, and packaging — as your visual material. Text becomes pure form.",
+        "Assemble a composition based on a single color family. Find every version of it across different sources.",
+        "Create a composition by overlapping translucent tissue paper in multiple layers. Let the layering create the image.",
+        "Make a composition using found ephemera from a single day — tickets, wrappers, receipts, handwriting.",
+        "Tear paper into strips and weave or braid them into a composition.",
+        "Work completely without scissors — fold, tear, layer, and arrange until the composition is complete."
       ]
     }
   }

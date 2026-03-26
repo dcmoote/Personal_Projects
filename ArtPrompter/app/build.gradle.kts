@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.artprompter"
+    namespace = "com.dcmoote.inkwell"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
@@ -13,7 +13,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.artprompter"
+        applicationId = "com.dcmoote.inkwell"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -57,6 +57,7 @@ dependencies {
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.gson)
     implementation(libs.androidx.work.runtime.ktx)
+    implementation(libs.billing)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

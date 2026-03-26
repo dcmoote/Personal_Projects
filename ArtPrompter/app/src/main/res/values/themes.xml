@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.ArtPrompter" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.Inkwell" parent="android:Theme.Material.Light.NoActionBar">
+        <!-- Match system splash screen to app background so cold start doesn't flash white -->
+        <item name="android:windowSplashScreenBackground">#FFFBEB</item>
+    </style>
 </resources>
