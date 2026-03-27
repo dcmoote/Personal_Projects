@@ -53,7 +53,7 @@ class UserPreferencesManager(context: Context) {
         set(value) = prefs.edit().putBoolean(KEY_USE_AI, value).apply()
 
     var themeMode: String
-        get() = prefs.getString(KEY_THEME_MODE, ThemeMode.SYSTEM) ?: ThemeMode.SYSTEM
+        get() = prefs.getString(KEY_THEME_MODE, ThemeMode.LIGHT) ?: ThemeMode.LIGHT
         set(value) = prefs.edit().putString(KEY_THEME_MODE, value).apply()
 
     object CreativeType {

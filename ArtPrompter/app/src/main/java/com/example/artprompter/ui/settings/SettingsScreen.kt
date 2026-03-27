@@ -39,6 +39,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -88,7 +90,8 @@ fun SettingsScreen(
     onResetOnboarding: () -> Unit = {},
     onGoProClick: () -> Unit = {}
 ) {
-    val container = (LocalContext.current.applicationContext as InkwellApplication).container
+    val context = LocalContext.current
+    val container = (context.applicationContext as InkwellApplication).container
     val isPro by container.billingManager.isPro.collectAsState()
     val vm: SettingsViewModel = viewModel(
         factory = SettingsViewModel.Factory(container.userPreferencesManager, container.promptDao, LocalContext.current.applicationContext)
@@ -211,7 +214,9 @@ fun SettingsScreen(
             Spacer(Modifier.height(8.dp))
             DirectionLevelSelector(
                 selected = state.directionLevel,
-                onSelect = vm::setDirectionLevel
+                isPro = isPro,
+                onSelect = vm::setDirectionLevel,
+                onGoProClick = onGoProClick
             )
 
             Spacer(Modifier.height(24.dp))
@@ -252,8 +257,7 @@ fun SettingsScreen(
             ) {
                 listOf(
                     UserPreferencesManager.ThemeMode.LIGHT to "Light",
-                    UserPreferencesManager.ThemeMode.DARK to "Dark",
-                    UserPreferencesManager.ThemeMode.SYSTEM to "System"
+                    UserPreferencesManager.ThemeMode.DARK to "Dark"
                 ).forEach { (value, label) ->
                     FilterChip(
                         selected = state.themeMode == value,
@@ -359,18 +363,24 @@ fun SettingsScreen(
             }
 
             Spacer(Modifier.height(12.dp))
+            val versionName = remember {
+                context.packageManager.getPackageInfo(context.packageName, 0).versionName
+            }
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text("Version", style = MaterialTheme.typography.bodyLarge)
-                Text("1.0.0", style = MaterialTheme.typography.bodyMedium,
+                Text(versionName ?: "", style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
             Spacer(Modifier.height(8.dp))
             TextButton(
-                onClick = { /* TODO: open privacy policy */ },
+                onClick = {
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://dcmoote.github.io/inkwell_privacy/"))
+                    context.startActivity(intent)
+                },
                 modifier = Modifier.fillMaxWidth(),
                 contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp)
             ) {
@@ -448,13 +458,16 @@ private fun SectionHeader(title: String, isWarning: Boolean = false) {
 @Composable
 private fun DirectionLevelSelector(
     selected: Int,
-    onSelect: (Int) -> Unit
+    isPro: Boolean,
+    onSelect: (Int) -> Unit,
+    onGoProClick: () -> Unit
 ) {
     Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
         DIRECTION_OPTIONS.forEach { (level, label, desc) ->
             val isSelected = selected == level
+            val isLocked = !isPro && level != UserPreferencesManager.DirectionLevel.GUIDED
             Card(
-                onClick = { onSelect(level) },
+                onClick = { if (isLocked) onGoProClick() else onSelect(level) },
                 modifier = Modifier.fillMaxWidth(),
                 border = BorderStroke(
                     width = if (isSelected) 2.dp else 1.dp,
@@ -472,15 +485,25 @@ private fun DirectionLevelSelector(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Column(modifier = Modifier.weight(1f)) {
-                        Text(label, style = MaterialTheme.typography.titleSmall)
+                        Text(
+                            label,
+                            style = MaterialTheme.typography.titleSmall,
+                            color = if (isLocked) MaterialTheme.colorScheme.onSurfaceVariant
+                                    else MaterialTheme.colorScheme.onSurface
+                        )
                         Text(
                             desc,
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
-                    if (isSelected) {
-                        Icon(
+                    when {
+                        isLocked -> Icon(
+                            Icons.Default.Lock,
+                            contentDescription = "Requires Pro",
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                        isSelected -> Icon(
                             Icons.Default.Check,
                             contentDescription = null,
                             tint = MaterialTheme.colorScheme.primary

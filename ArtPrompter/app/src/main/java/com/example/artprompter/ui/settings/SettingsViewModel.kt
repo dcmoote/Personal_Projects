@@ -4,19 +4,15 @@ import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import androidx.work.ExistingPeriodicWorkPolicy
-import androidx.work.PeriodicWorkRequestBuilder
-import androidx.work.WorkManager
 import com.dcmoote.inkwell.data.local.dao.PromptDao
 import com.dcmoote.inkwell.data.prefs.UserPreferencesManager
-import com.dcmoote.inkwell.worker.DailyPromptWorker
+import com.dcmoote.inkwell.util.ReminderScheduler
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import java.util.Calendar
-import java.util.concurrent.TimeUnit
 
 class SettingsViewModel(
     private val prefs: UserPreferencesManager,
@@ -111,27 +107,11 @@ class SettingsViewModel(
     }
 
     private fun rescheduleReminder() {
-        val wm = WorkManager.getInstance(context)
         if (!prefs.reminderEnabled) {
-            wm.cancelUniqueWork("daily_prompt_reminder")
+            ReminderScheduler.cancel(context)
             return
         }
-        val now = Calendar.getInstance()
-        val target = Calendar.getInstance().apply {
-            set(Calendar.HOUR_OF_DAY, prefs.reminderTimeHour)
-            set(Calendar.MINUTE, prefs.reminderTimeMinute)
-            set(Calendar.SECOND, 0)
-            if (before(now)) add(Calendar.DAY_OF_YEAR, 1)
-        }
-        val initialDelay = target.timeInMillis - now.timeInMillis
-        val request = PeriodicWorkRequestBuilder<DailyPromptWorker>(1, TimeUnit.DAYS)
-            .setInitialDelay(initialDelay, TimeUnit.MILLISECONDS)
-            .build()
-        wm.enqueueUniquePeriodicWork(
-            "daily_prompt_reminder",
-            ExistingPeriodicWorkPolicy.UPDATE,
-            request
-        )
+        ReminderScheduler.schedule(context, prefs.reminderTimeHour, prefs.reminderTimeMinute)
     }
 
     fun setUseAi(use: Boolean) {

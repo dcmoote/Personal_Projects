@@ -19,3 +19,6 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# Keep Gson model classes so field names aren't renamed by R8
+-keep class com.dcmoote.inkwell.util.PromptLibrary { *; }

@@ -3,6 +3,8 @@ package com.dcmoote.inkwell.ui.home
 import android.content.Intent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -55,7 +57,7 @@ fun HomeScreen() {
     val context = LocalContext.current
     val container = (context.applicationContext as InkwellApplication).container
     val vm: HomeViewModel = viewModel(
-        factory = HomeViewModel.Factory(container.promptRepository, container.promptDao, container.userPreferencesManager)
+        factory = HomeViewModel.Factory(container.promptRepository, container.promptDao, container.userPreferencesManager, container.billingManager)
     )
     val state by vm.uiState.collectAsState()
 
@@ -183,12 +185,12 @@ private fun PromptContent(
                     .fillMaxHeight()
                     .background(MaterialTheme.colorScheme.primary)
             )
-            Box(
+            Column(
                 modifier = Modifier
                     .weight(1f)
                     .fillMaxHeight()
-                    .padding(horizontal = 28.dp, vertical = 40.dp),
-                contentAlignment = Alignment.CenterStart
+                    .verticalScroll(rememberScrollState())
+                    .padding(horizontal = 28.dp, vertical = 40.dp)
             ) {
                 Text(
                     text = prompt.content,
