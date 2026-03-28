@@ -24,6 +24,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -42,6 +43,7 @@ import androidx.compose.material3.rememberTimePickerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -95,8 +97,9 @@ private fun pathFor(creativeType: String): List<Int> = when (creativeType) {
 
 @Composable
 fun OnboardingScreen(onComplete: () -> Unit) {
-    val prefs = (LocalContext.current.applicationContext as InkwellApplication)
-        .container.userPreferencesManager
+    val container = (LocalContext.current.applicationContext as InkwellApplication).container
+    val prefs = container.userPreferencesManager
+    val isPro by container.billingManager.isPro.collectAsState()
     val vm: OnboardingViewModel = viewModel(factory = OnboardingViewModel.Factory(prefs))
     val state by vm.state.collectAsState()
 
@@ -152,6 +155,7 @@ fun OnboardingScreen(onComplete: () -> Unit) {
             )
             6 -> PromptDirectionStep(
                 selected = state.directionLevel,
+                isPro = isPro,
                 stepIndex = stepIndex(6),
                 totalSteps = totalSteps,
                 onSelect = vm::setDirectionLevel,
@@ -458,6 +462,7 @@ private fun ArtThemeStep(
 @Composable
 private fun PromptDirectionStep(
     selected: Int,
+    isPro: Boolean,
     stepIndex: Int,
     totalSteps: Int,
     onSelect: (Int) -> Unit,
@@ -477,7 +482,8 @@ private fun PromptDirectionStep(
             title = "Minimal",
             subtitle = "A word or short phrase — just a spark",
             selected = selected == UserPreferencesManager.DirectionLevel.MINIMAL,
-            onClick = { onSelect(UserPreferencesManager.DirectionLevel.MINIMAL) }
+            onClick = { onSelect(UserPreferencesManager.DirectionLevel.MINIMAL) },
+            isLocked = !isPro
         )
         Spacer(Modifier.height(12.dp))
         SelectionCard(
@@ -491,7 +497,8 @@ private fun PromptDirectionStep(
             title = "Detailed",
             subtitle = "Full specifics — just pick up the brush or pen",
             selected = selected == UserPreferencesManager.DirectionLevel.DETAILED,
-            onClick = { onSelect(UserPreferencesManager.DirectionLevel.DETAILED) }
+            onClick = { onSelect(UserPreferencesManager.DirectionLevel.DETAILED) },
+            isLocked = !isPro
         )
     }
 }
@@ -588,16 +595,17 @@ private fun SelectionCard(
     title: String,
     subtitle: String,
     selected: Boolean,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    isLocked: Boolean = false
 ) {
     Card(
-        onClick = onClick,
+        onClick = if (isLocked) {{}} else onClick,
         modifier = Modifier.fillMaxWidth(),
         shape = MaterialTheme.shapes.small,
         border = BorderStroke(
-            width = if (selected) 1.5.dp else 1.dp,
-            color = if (selected) MaterialTheme.colorScheme.primary
-            else MaterialTheme.colorScheme.outlineVariant
+            width = if (selected && !isLocked) 1.5.dp else 1.dp,
+            color = if (selected && !isLocked) MaterialTheme.colorScheme.primary
+                    else MaterialTheme.colorScheme.outlineVariant
         ),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surface
@@ -606,10 +614,9 @@ private fun SelectionCard(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(androidx.compose.foundation.layout.IntrinsicSize.Min)
+                .height(IntrinsicSize.Min)
         ) {
-            // Left accent bar — appears only when selected
-            if (selected) {
+            if (selected && !isLocked) {
                 Box(
                     modifier = Modifier
                         .width(3.dp)
@@ -621,7 +628,7 @@ private fun SelectionCard(
                 modifier = Modifier
                     .weight(1f)
                     .padding(
-                        start = if (selected) 14.dp else 16.dp,
+                        start = if (selected && !isLocked) 14.dp else 16.dp,
                         end = 16.dp,
                         top = 16.dp,
                         bottom = 16.dp
@@ -632,8 +639,10 @@ private fun SelectionCard(
                     Text(
                         title,
                         style = MaterialTheme.typography.titleMedium,
-                        fontWeight = if (selected) androidx.compose.ui.text.font.FontWeight.SemiBold
-                                     else androidx.compose.ui.text.font.FontWeight.Normal
+                        fontWeight = if (selected && !isLocked) FontWeight.SemiBold
+                                     else FontWeight.Normal,
+                        color = if (isLocked) MaterialTheme.colorScheme.onSurfaceVariant
+                                else MaterialTheme.colorScheme.onSurface
                     )
                     Spacer(Modifier.height(2.dp))
                     Text(
@@ -642,9 +651,15 @@ private fun SelectionCard(
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
-                if (selected) {
-                    Spacer(Modifier.width(8.dp))
-                    Icon(
+                Spacer(Modifier.width(8.dp))
+                when {
+                    isLocked -> Icon(
+                        Icons.Default.Lock,
+                        contentDescription = "Requires Pro",
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.size(18.dp)
+                    )
+                    selected -> Icon(
                         Icons.Default.Check,
                         contentDescription = null,
                         tint = MaterialTheme.colorScheme.primary,

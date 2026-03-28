@@ -97,11 +97,6 @@ fun AppNavigation(appViewModel: AppViewModel) {
             composable(Screen.Settings.route) {
                 SettingsScreen(
                     appViewModel = appViewModel,
-                    onResetOnboarding = {
-                        navController.navigate(ROUTE_ONBOARDING) {
-                            popUpTo(0) { inclusive = true }
-                        }
-                    },
                     onGoProClick = { navController.navigate(ROUTE_PAYWALL) }
                 )
             }

@@ -12,7 +12,6 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import java.util.Calendar
 
 class SettingsViewModel(
     private val prefs: UserPreferencesManager,
@@ -126,19 +125,6 @@ class SettingsViewModel(
 
     fun clearHistory() {
         viewModelScope.launch { promptDao.deleteAll() }
-    }
-
-    fun resetOnboarding() {
-        viewModelScope.launch {
-            val startOfToday = Calendar.getInstance().apply {
-                set(Calendar.HOUR_OF_DAY, 0)
-                set(Calendar.MINUTE, 0)
-                set(Calendar.SECOND, 0)
-                set(Calendar.MILLISECOND, 0)
-            }.timeInMillis
-            promptDao.deletePromptsSince(startOfToday)
-            prefs.onboardingComplete = false
-        }
     }
 
     class Factory(

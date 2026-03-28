@@ -41,6 +41,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import android.content.Intent
 import android.net.Uri
+import androidx.compose.foundation.clickable
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -87,7 +88,6 @@ private val DIRECTION_OPTIONS = listOf(
 @Composable
 fun SettingsScreen(
     appViewModel: AppViewModel,
-    onResetOnboarding: () -> Unit = {},
     onGoProClick: () -> Unit = {}
 ) {
     val context = LocalContext.current
@@ -99,7 +99,6 @@ fun SettingsScreen(
     val state by vm.state.collectAsState()
     var showTimePicker by remember { mutableStateOf(false) }
     var showClearHistoryDialog by remember { mutableStateOf(false) }
-    var showResetOnboardingDialog by remember { mutableStateOf(false) }
 
     Column(modifier = Modifier.fillMaxSize()) {
         CenterAlignedTopAppBar(title = { Text("Settings") })
@@ -278,7 +277,9 @@ fun SettingsScreen(
             SectionHeader("Prompt library")
             Spacer(Modifier.height(12.dp))
             Row(
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .then(if (!isPro) Modifier.clickable(onClick = onGoProClick) else Modifier),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -295,13 +296,12 @@ fun SettingsScreen(
                 if (isPro) {
                     Switch(checked = state.useAi, onCheckedChange = vm::setUseAi)
                 } else {
-                    IconButton(onClick = onGoProClick) {
-                        Icon(
-                            Icons.Default.Lock,
-                            contentDescription = "Upgrade to Pro",
-                            tint = MaterialTheme.colorScheme.primary
-                        )
-                    }
+                    Icon(
+                        Icons.Default.Lock,
+                        contentDescription = "Upgrade to Pro",
+                        tint = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.padding(12.dp)
+                    )
                 }
             }
 
@@ -319,14 +319,6 @@ fun SettingsScreen(
             ) {
                 Text("Clear prompt history", color = MaterialTheme.colorScheme.error)
             }
-            Spacer(Modifier.height(8.dp))
-            OutlinedButton(
-                onClick = { showResetOnboardingDialog = true },
-                modifier = Modifier.fillMaxWidth(),
-                border = BorderStroke(1.dp, MaterialTheme.colorScheme.error)
-            ) {
-                Text("Reset onboarding", color = MaterialTheme.colorScheme.error)
-            }
 
             Spacer(Modifier.height(24.dp))
             HorizontalDivider()
@@ -338,7 +330,9 @@ fun SettingsScreen(
 
             // Pro status row
             Row(
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .then(if (!isPro) Modifier.clickable(onClick = onGoProClick) else Modifier),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -358,7 +352,12 @@ fun SettingsScreen(
                         tint = MaterialTheme.colorScheme.primary
                     )
                 } else {
-                    TextButton(onClick = onGoProClick) { Text("Upgrade") }
+                    Text(
+                        "Upgrade",
+                        style = MaterialTheme.typography.labelLarge,
+                        color = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 8.dp)
+                    )
                 }
             }
 
@@ -424,26 +423,6 @@ fun SettingsScreen(
         )
     }
 
-    if (showResetOnboardingDialog) {
-        AlertDialog(
-            onDismissRequest = { showResetOnboardingDialog = false },
-            title = { Text("Reset onboarding?") },
-            text = { Text("You'll be taken back through the setup flow.") },
-            confirmButton = {
-                TextButton(onClick = {
-                    vm.resetOnboarding()
-                    showResetOnboardingDialog = false
-                    onResetOnboarding()
-                }) {
-
-                    Text("Reset", color = MaterialTheme.colorScheme.error)
-                }
-            },
-            dismissButton = {
-                TextButton(onClick = { showResetOnboardingDialog = false }) { Text("Cancel") }
-            }
-        )
-    }
 }
 
 @Composable

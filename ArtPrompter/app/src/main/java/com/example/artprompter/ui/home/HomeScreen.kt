@@ -80,10 +80,19 @@ fun HomeScreen() {
             title = { Text("What would you like today?") },
             text = { Text("Choose the type of prompt to generate.") },
             confirmButton = {
-                Button(onClick = { vm.refreshPromptWithType("ART") }) { Text("Art") }
-            },
-            dismissButton = {
-                OutlinedButton(onClick = { vm.refreshPromptWithType("WRITING") }) { Text("Writing") }
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    OutlinedButton(
+                        onClick = { vm.refreshPromptWithType("WRITING") },
+                        modifier = Modifier.weight(1f)
+                    ) { Text("Writing") }
+                    Button(
+                        onClick = { vm.refreshPromptWithType("ART") },
+                        modifier = Modifier.weight(1f)
+                    ) { Text("Art") }
+                }
             }
         )
     }

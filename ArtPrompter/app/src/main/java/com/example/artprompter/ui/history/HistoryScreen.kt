@@ -256,7 +256,10 @@ fun HistoryScreen() {
                 )
             },
             confirmButton = {
-                TextButton(onClick = { selectedPrompt = null }) { Text("Close") }
+                TextButton(
+                    onClick = { selectedPrompt = null },
+                    modifier = Modifier.fillMaxWidth()
+                ) { Text("Close", modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center) }
             }
         )
     }
