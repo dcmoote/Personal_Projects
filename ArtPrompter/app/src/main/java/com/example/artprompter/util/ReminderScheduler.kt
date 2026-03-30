@@ -9,10 +9,15 @@ import com.dcmoote.inkwell.MainActivity
 import com.dcmoote.inkwell.receiver.ReminderReceiver
 import java.util.Calendar
 
+// Schedules and cancels the daily reminder alarm using AlarmManager.
+// AlarmManager is used instead of WorkManager because setAlarmClock() fires at an exact time
+// even when the device is in Doze mode, giving reliable daily delivery.
 object ReminderScheduler {
 
     private const val REQUEST_CODE = 1002
 
+    // Schedules the alarm for the next occurrence of hour:minute.
+    // If that time has already passed today, the alarm is set for tomorrow.
     fun schedule(context: Context, hour: Int, minute: Int) {
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val operation = buildBroadcastIntent(context)

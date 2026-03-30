@@ -9,11 +9,14 @@ import androidx.core.app.NotificationCompat
 import com.dcmoote.inkwell.MainActivity
 import com.dcmoote.inkwell.R
 
+// Handles notification channel setup and posting the daily prompt notification.
+// The channel must be created before any notification is posted — this is done in Application.onCreate().
 object NotificationHelper {
 
     const val CHANNEL_ID = "daily_prompt"
     private const val NOTIFICATION_ID = 1001
 
+    // Creates the notification channel. Safe to call multiple times — Android ignores duplicates.
     fun createChannel(context: Context) {
         val channel = NotificationChannel(
             CHANNEL_ID,
@@ -26,6 +29,8 @@ object NotificationHelper {
         manager.createNotificationChannel(channel)
     }
 
+    // Posts the reminder notification. Tapping it opens MainActivity.
+    // The prompt content is intentionally not shown here — users discover it inside the app.
     fun showPromptNotification(context: Context) {
         val launchIntent = Intent(context, MainActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK

@@ -8,9 +8,12 @@ import androidx.room.Update
 import com.dcmoote.inkwell.data.local.entity.Prompt
 import kotlinx.coroutines.flow.Flow
 
+// Data Access Object for the prompts table.
+// Flow-returning queries emit a new list automatically whenever the underlying data changes.
 @Dao
 interface PromptDao {
 
+    // Returns the auto-generated row ID — must be captured to keep the in-memory Prompt in sync.
     @Insert
     suspend fun insert(prompt: Prompt): Long
 

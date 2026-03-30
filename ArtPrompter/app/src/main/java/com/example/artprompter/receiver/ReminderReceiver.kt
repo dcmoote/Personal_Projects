@@ -7,6 +7,9 @@ import com.dcmoote.inkwell.data.prefs.UserPreferencesManager
 import com.dcmoote.inkwell.util.NotificationHelper
 import com.dcmoote.inkwell.util.ReminderScheduler
 
+// Fired by AlarmManager at the user's scheduled reminder time.
+// Shows the notification, then re-schedules the alarm for the same time tomorrow.
+// AlarmManager alarms are one-shot, so rescheduling here is what makes the reminder repeat daily.
 class ReminderReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         NotificationHelper.showPromptNotification(context)

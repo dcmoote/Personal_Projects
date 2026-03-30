@@ -7,6 +7,8 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
+// App-level ViewModel scoped to MainActivity. Holds state that must survive navigation
+// between screens, currently just the theme mode selection.
 class AppViewModel(private val prefs: UserPreferencesManager) : ViewModel() {
 
     private val _themeMode = MutableStateFlow(prefs.themeMode)

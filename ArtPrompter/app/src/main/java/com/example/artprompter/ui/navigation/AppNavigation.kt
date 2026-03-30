@@ -29,6 +29,7 @@ import com.dcmoote.inkwell.ui.onboarding.OnboardingScreen
 import com.dcmoote.inkwell.ui.paywall.PaywallScreen
 import com.dcmoote.inkwell.ui.settings.SettingsScreen
 
+// Defines the three main tabs shown in the bottom navigation bar.
 sealed class Screen(val route: String, val label: String, val icon: ImageVector) {
     object Home : Screen("home", "Today", Icons.Default.Home)
     object History : Screen("history", "History", Icons.Default.List)
@@ -39,6 +40,9 @@ private val bottomNavScreens = listOf(Screen.Home, Screen.History, Screen.Settin
 private const val ROUTE_ONBOARDING = "onboarding"
 private const val ROUTE_PAYWALL = "paywall"
 
+// Root composable that owns the NavController and Scaffold.
+// Decides the start destination based on whether onboarding has been completed.
+// The bottom nav bar is hidden on onboarding and paywall screens.
 @Composable
 fun AppNavigation(appViewModel: AppViewModel) {
     val prefs = (LocalContext.current.applicationContext as InkwellApplication)
@@ -49,6 +53,7 @@ fun AppNavigation(appViewModel: AppViewModel) {
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentDestination = navBackStackEntry?.destination
 
+    // Only show the bottom bar when the current route is one of the three main tabs.
     val showBottomBar = bottomNavScreens.any {
         currentDestination?.hierarchy?.any { dest -> dest.route == it.route } == true
     }
@@ -65,6 +70,7 @@ fun AppNavigation(appViewModel: AppViewModel) {
                                 ?.any { it.route == screen.route } == true,
                             onClick = {
                                 navController.navigate(screen.route) {
+                                    // Pop back to the start destination to avoid a growing back stack.
                                     popUpTo(navController.graph.findStartDestination().id) {
                                         saveState = true
                                     }
@@ -86,6 +92,7 @@ fun AppNavigation(appViewModel: AppViewModel) {
             composable(ROUTE_ONBOARDING) {
                 OnboardingScreen(
                     onComplete = {
+                        // Remove onboarding from the back stack so back-press doesn't return to it.
                         navController.navigate(Screen.Home.route) {
                             popUpTo(ROUTE_ONBOARDING) { inclusive = true }
                         }

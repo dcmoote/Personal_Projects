@@ -15,6 +15,8 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
+// Wraps the Google Play Billing Library. Exposes a single isPro StateFlow that the rest
+// of the app observes to gate Pro features without touching billing logic directly.
 class BillingManager(context: Context) {
 
     companion object {
@@ -26,6 +28,7 @@ class BillingManager(context: Context) {
 
     private val billingClient = BillingClient.newBuilder(context.applicationContext)
         .setListener { result, purchases ->
+            // Called when a purchase completes while the billing flow is open.
             if (result.responseCode == BillingClient.BillingResponseCode.OK) {
                 purchases?.forEach { handlePurchase(it) }
             }
@@ -43,6 +46,7 @@ class BillingManager(context: Context) {
         billingClient.startConnection(object : BillingClientStateListener {
             override fun onBillingSetupFinished(result: BillingResult) {
                 if (result.responseCode == BillingClient.BillingResponseCode.OK) {
+                    // Immediately check for any existing purchases so isPro is accurate on launch.
                     queryPurchases()
                 }
             }
@@ -53,6 +57,9 @@ class BillingManager(context: Context) {
         })
     }
 
+    // Queries Play for current purchase state and updates isPro accordingly.
+    // Also acknowledges any unacknowledged purchases — Play requires this within 3 days
+    // or the purchase is automatically refunded.
     fun queryPurchases() {
         val params = QueryPurchasesParams.newBuilder()
             .setProductType(BillingClient.ProductType.INAPP)
@@ -70,6 +77,7 @@ class BillingManager(context: Context) {
         }
     }
 
+    // Opens the Play Store purchase sheet for the Pro product.
     fun launchPurchaseFlow(activity: Activity) {
         val productList = listOf(
             QueryProductDetailsParams.Product.newBuilder()

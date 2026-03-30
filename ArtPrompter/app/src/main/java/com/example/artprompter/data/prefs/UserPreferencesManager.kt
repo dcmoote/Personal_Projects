@@ -3,6 +3,8 @@ package com.dcmoote.inkwell.data.prefs
 import android.content.Context
 import android.content.SharedPreferences
 
+// Thin wrapper around SharedPreferences that exposes all user settings as typed properties.
+// Used throughout the app instead of accessing SharedPreferences directly.
 class UserPreferencesManager(context: Context) {
 
     private val prefs: SharedPreferences =
@@ -56,6 +58,7 @@ class UserPreferencesManager(context: Context) {
         get() = prefs.getInt(KEY_LONGEST_STREAK, 0)
         set(value) = prefs.edit().putInt(KEY_LONGEST_STREAK, value).apply()
 
+    // Stored as "yyyy-MM-dd" — compared against today's date to calculate streaks.
     var lastCompletionDate: String
         get() = prefs.getString(KEY_LAST_COMPLETION_DATE, "") ?: ""
         set(value) = prefs.edit().putString(KEY_LAST_COMPLETION_DATE, value).apply()
@@ -81,6 +84,7 @@ class UserPreferencesManager(context: Context) {
         const val ABSTRACT = "Abstract"
     }
 
+    // Maps to the three tiers in prompts.json (stored as keys "1", "2", "3").
     object DirectionLevel {
         const val MINIMAL = 1  // Single word or short phrase — just a seed
         const val GUIDED = 2   // A sentence or two — concept and mood
