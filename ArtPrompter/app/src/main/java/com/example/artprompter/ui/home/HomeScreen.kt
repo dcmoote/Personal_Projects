@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Refresh
@@ -67,8 +68,10 @@ fun HomeScreen() {
             state.error != null -> ErrorState(message = state.error!!, onRetry = vm::loadTodaysPrompt)
             state.prompt != null -> PromptContent(
                 prompt = state.prompt!!,
+                currentStreak = state.currentStreak,
                 onRefresh = vm::refreshPrompt,
-                onToggleFavorite = { vm.toggleFavorite(state.prompt!!) }
+                onToggleFavorite = { vm.toggleFavorite(state.prompt!!) },
+                onMarkCompleted = { vm.markCompleted(state.prompt!!) }
             )
             else -> IdleState(onGenerate = vm::refreshPrompt)
         }
@@ -88,7 +91,7 @@ fun HomeScreen() {
                         onClick = { vm.refreshPromptWithType("WRITING") },
                         modifier = Modifier.weight(1f)
                     ) { Text("Writing") }
-                    Button(
+                    OutlinedButton(
                         onClick = { vm.refreshPromptWithType("ART") },
                         modifier = Modifier.weight(1f)
                     ) { Text("Art") }
@@ -122,8 +125,10 @@ private fun LoadingState() {
 @Composable
 private fun PromptContent(
     prompt: Prompt,
+    currentStreak: Int,
     onRefresh: () -> Unit,
-    onToggleFavorite: () -> Unit
+    onToggleFavorite: () -> Unit,
+    onMarkCompleted: () -> Unit
 ) {
     val context = LocalContext.current
     val day = remember { SimpleDateFormat("d", Locale.getDefault()).format(Date()) }
@@ -164,6 +169,14 @@ private fun PromptContent(
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
+                if (currentStreak > 1) {
+                    Spacer(Modifier.height(2.dp))
+                    Text(
+                        text = "Day $currentStreak",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.primary
+                    )
+                }
             }
             Column(horizontalAlignment = Alignment.End) {
                 Text(
@@ -225,6 +238,13 @@ private fun PromptContent(
                 label = if (prompt.isFavorite) "Saved" else "Save",
                 onClick = onToggleFavorite,
                 iconTint = if (prompt.isFavorite) MaterialTheme.colorScheme.primary
+                           else MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            LabeledActionButton(
+                icon = Icons.Default.Check,
+                label = if (prompt.isCompleted) "Created" else "Done",
+                onClick = onMarkCompleted,
+                iconTint = if (prompt.isCompleted) MaterialTheme.colorScheme.primary
                            else MaterialTheme.colorScheme.onSurfaceVariant
             )
             LabeledActionButton(

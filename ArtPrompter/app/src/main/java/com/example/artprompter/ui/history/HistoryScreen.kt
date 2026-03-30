@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
@@ -18,6 +19,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.List
@@ -67,6 +69,7 @@ import java.util.Locale
 fun HistoryScreen() {
     val context = LocalContext.current
     val container = (context.applicationContext as InkwellApplication).container
+    val prefs = container.userPreferencesManager
     val vm: HistoryViewModel = viewModel(
         factory = HistoryViewModel.Factory(container.promptDao)
     )
@@ -142,6 +145,44 @@ fun HistoryScreen() {
                         .padding(horizontal = 16.dp),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
+                    // Completion summary
+                    item {
+                        val totalCompleted = allPrompts.count { it.isCompleted }
+                        val streak = prefs.currentStreak
+                        if (totalCompleted > 0 || streak > 0) {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(vertical = 12.dp),
+                                horizontalArrangement = Arrangement.Center,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                if (streak > 0) {
+                                    Text(
+                                        text = "$streak-day streak",
+                                        style = MaterialTheme.typography.labelMedium,
+                                        color = MaterialTheme.colorScheme.primary
+                                    )
+                                }
+                                if (streak > 0 && totalCompleted > 0) {
+                                    Text(
+                                        text = "  ·  ",
+                                        style = MaterialTheme.typography.labelMedium,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                                    )
+                                }
+                                if (totalCompleted > 0) {
+                                    Text(
+                                        text = "$totalCompleted completed",
+                                        style = MaterialTheme.typography.labelMedium,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                                    )
+                                }
+                            }
+                            HorizontalDivider()
+                        }
+                    }
+
                     // Favorites filter chip
                     item {
                         Spacer(Modifier.height(4.dp))
@@ -313,6 +354,14 @@ private fun HistoryCard(prompt: Prompt, onClick: () -> Unit) {
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(6.dp)
                     ) {
+                        if (prompt.isCompleted) {
+                            Icon(
+                                imageVector = Icons.Default.Check,
+                                contentDescription = "Completed",
+                                tint = MaterialTheme.colorScheme.primary,
+                                modifier = Modifier.size(12.dp)
+                            )
+                        }
                         if (prompt.isFavorite) {
                             Icon(
                                 imageVector = Icons.Default.Favorite,
@@ -342,6 +391,7 @@ private fun HistoryCard(prompt: Prompt, onClick: () -> Unit) {
         }
     }
 }
+
 
 private fun promptTypeLabel(prompt: Prompt): String {
     return if (prompt.type == "WRITING") {

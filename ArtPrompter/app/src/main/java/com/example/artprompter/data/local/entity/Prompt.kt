@@ -12,5 +12,7 @@ data class Prompt(
     val content: String,
     val source: String,      // "AI" or "LOCAL"
     val timestamp: Long = System.currentTimeMillis(),
-    val isFavorite: Boolean = false
+    val isFavorite: Boolean = false,
+    val isCompleted: Boolean = false,
+    val completionNote: String? = null
 )

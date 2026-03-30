@@ -48,6 +48,18 @@ class UserPreferencesManager(context: Context) {
         get() = prefs.getInt(KEY_REMINDER_MINUTE, 0)
         set(value) = prefs.edit().putInt(KEY_REMINDER_MINUTE, value).apply()
 
+    var currentStreak: Int
+        get() = prefs.getInt(KEY_CURRENT_STREAK, 0)
+        set(value) = prefs.edit().putInt(KEY_CURRENT_STREAK, value).apply()
+
+    var longestStreak: Int
+        get() = prefs.getInt(KEY_LONGEST_STREAK, 0)
+        set(value) = prefs.edit().putInt(KEY_LONGEST_STREAK, value).apply()
+
+    var lastCompletionDate: String
+        get() = prefs.getString(KEY_LAST_COMPLETION_DATE, "") ?: ""
+        set(value) = prefs.edit().putString(KEY_LAST_COMPLETION_DATE, value).apply()
+
     var useAiWhenAvailable: Boolean
         get() = prefs.getBoolean(KEY_USE_AI, true)
         set(value) = prefs.edit().putBoolean(KEY_USE_AI, value).apply()
@@ -108,5 +120,8 @@ class UserPreferencesManager(context: Context) {
         private const val KEY_REMINDER_MINUTE = "reminder_minute"
         private const val KEY_USE_AI = "use_ai"
         private const val KEY_THEME_MODE = "theme_mode"
+        private const val KEY_CURRENT_STREAK = "current_streak"
+        private const val KEY_LONGEST_STREAK = "longest_streak"
+        private const val KEY_LAST_COMPLETION_DATE = "last_completion_date"
     }
 }
