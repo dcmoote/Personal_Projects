@@ -170,7 +170,7 @@ fun PaywallScreen(onBack: () -> Unit) {
                     shape = MaterialTheme.shapes.large
                 ) {
                     Text(
-                        text = "Unlock for \$6.99",
+                        text = "Unlock for \$4.99",
                         style = MaterialTheme.typography.labelLarge
                     )
                 }

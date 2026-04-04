@@ -339,7 +339,7 @@ fun SettingsScreen(
                 Column {
                     Text("Inkwell Pro", style = MaterialTheme.typography.bodyLarge)
                     Text(
-                        if (isPro) "Unlocked" else "$6.99 one-time",
+                        if (isPro) "Unlocked" else "$4.99 one-time",
                         style = MaterialTheme.typography.bodySmall,
                         color = if (isPro) MaterialTheme.colorScheme.primary
                                 else MaterialTheme.colorScheme.onSurfaceVariant
